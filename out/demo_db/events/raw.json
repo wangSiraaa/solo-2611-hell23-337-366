@@ -1,0 +1,23 @@
+{
+ "events": [
+  {
+   "id": "u",
+   "scale": "UTC",
+   "value": "2017-01-01T00:00:00Z",
+   "source": "A",
+   "key": "k",
+   "utc_label_sec": 1483228800,
+   "utc_nanos": 0,
+   "utc_leap60": false
+  },
+  {
+   "id": "t",
+   "scale": "TAI",
+   "value": "2017-01-01T00:00:37",
+   "source": "B",
+   "key": "k",
+   "fixed_tai_ns": 1483228837000000000
+  }
+ ],
+ "rejected": []
+}

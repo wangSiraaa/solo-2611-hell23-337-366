@@ -1,0 +1,48 @@
+{
+ "version": 1,
+ "rule_id": "r1",
+ "rules": {
+  "id": "r1",
+  "initial_offset": 36,
+  "changes": [],
+  "sealed_before": "2016-12-01T00:00:00Z",
+  "coverage": [
+   "2016-12-01T00:00:00Z",
+   "2017-02-01T00:00:00Z"
+  ]
+ },
+ "config": {
+  "tolerance_ns": 0,
+  "window_origin_tai_ns": 1483228800000000000,
+  "window_width_ns": 60000000000
+ },
+ "events": [
+  {
+   "id": "u",
+   "source": "A",
+   "key": "k",
+   "raw": {
+    "scale": "UTC",
+    "value": "2017-01-01T00:00:00Z"
+   },
+   "status": "supported",
+   "tai_ns": 1483228836000000000,
+   "reason": null
+  },
+  {
+   "id": "t",
+   "source": "B",
+   "key": "k",
+   "raw": {
+    "scale": "TAI",
+    "value": "2017-01-01T00:00:37"
+   },
+   "status": "supported",
+   "tai_ns": 1483228837000000000,
+   "reason": null
+  }
+ ],
+ "pairs": [],
+ "windows": [],
+ "windows_by_index": {}
+}

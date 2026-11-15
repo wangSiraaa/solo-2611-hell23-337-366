@@ -1,0 +1,85 @@
+{
+ "version": 2,
+ "rule_id": "r2",
+ "rules": {
+  "id": "r2",
+  "initial_offset": 36,
+  "changes": [
+   {
+    "effective": "2017-01-01T00:00:00Z",
+    "offset": 37
+   }
+  ],
+  "sealed_before": "2016-12-01T00:00:00Z",
+  "coverage": [
+   "2016-12-01T00:00:00Z",
+   "2017-02-01T00:00:00Z"
+  ]
+ },
+ "config": {
+  "tolerance_ns": 0,
+  "window_origin_tai_ns": 1483228800000000000,
+  "window_width_ns": 60000000000
+ },
+ "events": [
+  {
+   "id": "u",
+   "source": "A",
+   "key": "k",
+   "raw": {
+    "scale": "UTC",
+    "value": "2017-01-01T00:00:00Z"
+   },
+   "status": "supported",
+   "tai_ns": 1483228837000000000,
+   "reason": null
+  },
+  {
+   "id": "t",
+   "source": "B",
+   "key": "k",
+   "raw": {
+    "scale": "TAI",
+    "value": "2017-01-01T00:00:37"
+   },
+   "status": "supported",
+   "tai_ns": 1483228837000000000,
+   "reason": null
+  }
+ ],
+ "pairs": [
+  {
+   "a": "u",
+   "b": "t",
+   "key": "k",
+   "tai_a": 1483228837000000000,
+   "tai_b": 1483228837000000000,
+   "window": 0
+  }
+ ],
+ "windows": [
+  {
+   "index": 0,
+   "start_ns": 1483228800000000000,
+   "end_ns": 1483228860000000000,
+   "pair_count": 1,
+   "a_ids": [
+    "u"
+   ],
+   "b_ids": [
+    "t"
+   ]
+  }
+ ],
+ "windows_by_index": {
+  "0": {
+   "pair_count": 1,
+   "a_ids": [
+    "u"
+   ],
+   "b_ids": [
+    "t"
+   ]
+  }
+ }
+}

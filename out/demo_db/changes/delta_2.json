@@ -1,0 +1,66 @@
+{
+ "from_version": 1,
+ "to_version": 2,
+ "rule_id": "r2",
+ "event_changes": [
+  {
+   "id": "u",
+   "old": {
+    "status": "supported",
+    "tai_ns": 1483228836000000000,
+    "reason": null
+   },
+   "new": {
+    "status": "supported",
+    "tai_ns": 1483228837000000000,
+    "reason": null
+   }
+  }
+ ],
+ "pair_inserts": [
+  {
+   "a": "u",
+   "b": "t",
+   "key": "k",
+   "tai_a": 1483228837000000000,
+   "tai_b": 1483228837000000000,
+   "window": 0
+  }
+ ],
+ "pair_retracts": [],
+ "pair_updates": [],
+ "window_deltas": [
+  {
+   "index": 0,
+   "pairs_in": [
+    [
+     "u",
+     "t"
+    ]
+   ],
+   "pairs_out": [],
+   "count_delta": 1,
+   "after": {
+    "pair_count": 1,
+    "a_ids": [
+     "u"
+    ],
+    "b_ids": [
+     "t"
+    ]
+   }
+  }
+ ],
+ "stats": {
+  "utc_events_total": 1,
+  "utc_events_rescanned": 1,
+  "tai_gps_events_not_rescanned": 1,
+  "events_changed": 1,
+  "pair_candidates_scanned": 1,
+  "unchanged_neighbors_read": 1,
+  "pairs_inserted": 1,
+  "pairs_retracted": 0,
+  "pairs_updated": 0,
+  "windows_affected": 1
+ }
+}
