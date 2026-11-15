@@ -1,0 +1,42 @@
+[
+  {
+    "kind": "data",
+    "receiver": "R1",
+    "generation": 1,
+    "seq": 1,
+    "wire": "$GPGSV,2,1,02,11,30,100,40*4E\r\n"
+  },
+  {
+    "kind": "disconnect",
+    "receiver": "R1",
+    "generation": 1
+  },
+  {
+    "kind": "data",
+    "receiver": "R1",
+    "generation": 2,
+    "seq": 1,
+    "wire": "$GPGSV,2,2,02,22,30,100,40*4D\r\n"
+  },
+  {
+    "kind": "data",
+    "receiver": "R2",
+    "generation": 4,
+    "seq": 1,
+    "wire": "$GPGSV,1,1,02,31,30,100,40*4F\r\n"
+  },
+  {
+    "kind": "data",
+    "receiver": "R1",
+    "generation": 2,
+    "seq": 2,
+    "wire": "$GPGSV,2,1,02,41,30,100,40*4B\r\n"
+  },
+  {
+    "kind": "data",
+    "receiver": "R1",
+    "generation": 2,
+    "seq": 3,
+    "wire": "$GPGSV,2,2,02,42,30,100,40*4B\r\n"
+  }
+]
