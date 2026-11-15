@@ -1,0 +1,12 @@
+{
+  "byte_cuts": [
+    227,
+    195,
+    329
+  ],
+  "control_points": [
+    "after_parent_copy_before_child_copy",
+    "after_commit_before_checkpoint"
+  ],
+  "expected_committed_transactions": 2
+}

@@ -1,0 +1,18 @@
+CREATE TABLE parent(id INTEGER PRIMARY KEY, label TEXT);
+CREATE TABLE child(id INTEGER PRIMARY KEY, parent_id INTEGER REFERENCES parent(id), note TEXT);
+BEGIN;
+COPY parent FROM STDIN;
+1	alpha
+\.
+COPY child FROM STDIN;
+10	1	COMMIT; is data
+\.
+COMMIT;
+BEGIN;
+COPY parent FROM STDIN;
+2	beta
+\.
+COPY child FROM STDIN;
+11	2	second
+\.
+COMMIT;
