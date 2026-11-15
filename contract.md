@@ -1,0 +1,11 @@
+structure.py实际编译SDMX DSD属性挂接，data_reader.py读取GenericData，warehouse.py换schema却不迁移属性，UNIT由series改挂obs后全部消失。请实现plan-migration、apply-migration、ingest-revision、query-version，交付真实SQLite统计仓、迁移说明、可回查修订事实与兼容导出。
+
+使用legacy的COUNTRY/MEASURE/TIME固定维度、有限本地codelist和GenericData结构；最多100000观测、4 DSD版本、50修订。DSD允许属性在dataset、series、group(任意非时间维子集)及observation间迁移，也可新增必需属性、删除可选属性；维度身份不变，不做代码语义映射。观测值有限十进制原文规范化，0、missing、absent属性和显式空文本不同。属性只可出现于所属挂接层，作用域同键冲突需隔离真实受影响观测。
+
+迁移必须以每个旧观测的有效属性为语义基准：细化挂接可展开但保留原声明来源；粗化只有同一新scope内旧有效值全部相同且不存在required缺失才可无损，冲突必须在plan列出相关观测，不能最后值覆盖。可由输入显式带旧值前置条件的修订先消除冲突，再重新计划；不允许迁移器自主改单位、换算数值或填假默认。新增必需属性若无数据来源则对应观测隔离，而非凭空满足。
+
+当前版接受更新/删除/重新插入观测，revision序号和完整观测键决定身份，重复同序同内容幂等、同序异内容冲突。迁移后旧DSD查询仍需可用：能按旧挂接无损表达时生成兼容视图；若后续obs级UNIT产生series内分歧，旧版导出明确不可表达及来源，不静默回退旧数据。所有版本事实可回查，current不是把历史原文覆盖。
+
+请在规范有效属性事实表与原层级声明存储之间作设计选择，说明粗化验证、来源规模和兼容视图的正确性取舍；不能给每版全量复制XML作为唯一查询实现。发布迁移、属性索引和current视图要原子，另一个读连接在中间只能观察完整某版；plan绑定DSD/数据修订，期间新观测使plan不适用时须拒绝重算。审计实际物化行数/来源边数/文件总字节，不设节省比例。
+
+验证真实XML：series→obs→group的细化/粗化，原count/USD冲突，required缺失，显式空NOTE，0/missing，迁移期间修订，obs修订导致旧版不可表达，同revision冲突、迁移中断回滚。独立按完整键计算每版有效属性作为oracle，逐观测比较值、存在性、隔离和来源，不能只看schema编译通过。交付源码、设计、实际SQLite查询与读回日志；不做统计预测、SDMX网络抓取、任意维度重构或自动单位换算。

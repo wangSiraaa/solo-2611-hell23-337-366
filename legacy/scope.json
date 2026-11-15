@@ -1,0 +1,11 @@
+{
+  "question_id": "319",
+  "scope_limits": [
+    "离线SDMX 2.1 GenericData与给定DSD子集",
+    "COUNTRY/MEASURE/TIME三维、至多100观测",
+    "不支持远程registry、数据修订事务或统计推断"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}

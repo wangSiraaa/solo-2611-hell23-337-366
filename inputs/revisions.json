@@ -1,0 +1,18 @@
+[
+  {
+    "action": "migrate",
+    "from": "DSD1",
+    "to": "DSD2",
+    "unit_attachment": "observation"
+  },
+  {
+    "action": "correct",
+    "key": {
+      "COUNTRY": "CN",
+      "MEASURE": "VOL",
+      "TIME": "2026-02"
+    },
+    "unit": "thousand_count",
+    "value": "2"
+  }
+]
