@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ties",
+    "offset": 2,
+    "limit": 2,
+    "with_ties": true,
+    "page_size": 1
+  },
+  {
+    "id": "plain",
+    "offset": 2,
+    "limit": 2,
+    "with_ties": false,
+    "page_size": 2
+  },
+  {
+    "id": "cut-tie",
+    "offset": 4,
+    "limit": 1,
+    "with_ties": true,
+    "page_size": 3
+  },
+  {
+    "id": "zero",
+    "offset": 0,
+    "limit": 0,
+    "with_ties": true,
+    "page_size": 1
+  },
+  {
+    "id": "beyond",
+    "offset": 99,
+    "limit": 3,
+    "with_ties": false,
+    "page_size": 7
+  }
+]

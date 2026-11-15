@@ -1,0 +1,18 @@
+[
+  {
+    "id": "A",
+    "path": "A.jsonl"
+  },
+  {
+    "id": "B",
+    "path": "B.jsonl"
+  },
+  {
+    "id": "C",
+    "path": "C.jsonl"
+  },
+  {
+    "id": "empty",
+    "path": "empty.jsonl"
+  }
+]

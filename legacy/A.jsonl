@@ -1,0 +1,4 @@
+{"score": 9, "day": null, "business_id": "dup", "payload": {"note": "dup"}}
+{"score": 8, "day": 1, "business_id": "same", "payload": {"note": "same"}}
+{"score": 8, "day": 1, "business_id": "same", "payload": {"note": "same"}}
+{"score": null, "day": 1, "business_id": "tail", "payload": {"note": "tail"}}

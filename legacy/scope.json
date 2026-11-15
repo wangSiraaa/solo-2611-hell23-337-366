@@ -1,0 +1,11 @@
+{
+  "question_id": "315",
+  "scope_limits": [
+    "最多6分片每片200行，整数/NULL业务键",
+    "固定排序规则，只提供读接口，不解析SQL",
+    "一个页面每分片缓冲，可流式写输出，无服务部署"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}

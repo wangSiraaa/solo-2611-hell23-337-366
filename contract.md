@@ -1,0 +1,11 @@
+shards.py是真实SQLite分片读取器，merge.py下推topN后归并，capabilities.py记录能力；跨分片WITH TIES会丢掉某片超过N的同键尾部。请升级为open-query、next-page、close-query、audit的联合查询组件，输出全局OFFSET/LIMIT WITH TIES及可重开分页状态，不能先全量读所有分片再sort。
+
+最多8分片、每片50000行；score/day可NULL整数，业务排序score DESC NULLS LAST/day ASC NULLS FIRST，稳定尾键(shard_id UTF8,local_id ASC)。同业务键才是ties，业务ID重复仍保留每片物理身份。分片声明max_page、支持seek或仅offset、可否返回ties以及固定同一排序语义；不兼容排序必须拒绝，不能悄悄本地重排一页。所有合法offset/limit包括0及页长1..100都支持。
+
+open-query绑定每片独立snapshot_token的版本向量；不要求分片间同时刻的全局事务，要求后续每片一直读所绑定版本。snapshot.py已提供SQLite backup生成真实快照及mode=ro打开入口，候选需将其接入分片adapter并实现token注册/过期/close；这些本地真实只读快照文件，源可继续更新，读者重开最多两次。next-page若某片快照过期/缺失整次查询不可继续，不混新旧页；已交付页可保留但需明确query未完成。continuation状态应包含每片已消费边界与未消费缓冲，不能把已预读却未输出行跳过。limit对应整个查询，网络分页只分批交付；ties可能跨多次next-page。
+
+你需为seek/offset和有无ties能力选择安全下推及缓冲策略，说明多取、暂停和恢复成本如何受全局边界约束。一个分片最多保留一个adapter页与必要头/边界元数据，输出流式；允许持久化未消费页，按实际字节统计。必须先有每个未耗尽分片的头才能定全局下一行；无要求请求数全局最优，但给定低limit非并列基准中实际取回行须少于全量，包含offset跳过和lookahead的全部行数。
+
+测试真实分片快照：某片并列组超过max_page、offset切在ties中、空片/NULL、同业务ID、页长变化、一个仅offset片、源更新但旧查询不变、丢失snapshot、持久页写入中断后重开。独立完整排序冻结副本作oracle，逐物理身份比较全查询顺序和续接不重不漏，核对所有adapter调用及内存页数。交付源码、能力计划、持久状态和可复跑日志，不做任意SQL优化器、分布式共识或远端数据库部署。
+
+所有路径均相对当前仓库根目录。先运行 baseline_demo.py 查看已有实现及其已知缺口，再在已有模块上实现完整目标，保留可重读数据及明确的失败结果；新增验证与设计说明一起交付。不要把本题改成只解释方案。
