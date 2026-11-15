@@ -1,0 +1,65 @@
+workdir = /tmp/jointquery-ukkz3xi2
+[1] 混合能力 / 跨页并列组 / offset 切在 ties 中
+  PASS t1 offset=0 limit=5 ties=True -- rows=5
+  PASS t1 offset=3 limit=2 ties=True -- rows=2
+  PASS t1 offset=0 limit=1 ties=True -- rows=2
+  PASS t1 offset=0 limit=10 ties=False -- rows=10
+  PASS t1 offset=50 limit=5 ties=True -- rows=5
+  PASS t1 offset=0 limit=0 ties=True -- rows=0
+  PASS t1 offset=9999 limit=5 ties=False -- rows=0
+[2] NULL score/day 排序 + 同业务 ID 多物理身份
+  PASS t2 nulls offset=0 limit=8 -- rows=8
+  PASS t2 null-order
+  PASS t2 dup-identity -- dup rows=[]
+  PASS t2 nulls offset=2 limit=3 -- rows=3
+  PASS t2 null-order
+  PASS t2 dup-identity -- dup rows=[]
+  PASS t2 nulls offset=0 limit=20 -- rows=20
+  PASS t2 null-order
+  PASS t2 dup-identity -- dup rows=[('N1', 25), ('N2', 4)]
+[3] 页长变化 + continuation 重开不重不漏
+  PASS t3 reopen-continuation -- rows=30
+  PASS t3 reopen-budget<=2 -- {"S1": 2, "S2": 2, "S3": 2}
+  PASS t3 page_size=1
+[4] 源库继续更新，绑定快照查询结果不变
+  PASS t4 snapshot-immutable -- 源新增 local_id=81 未泄漏进旧查询
+  PASS t4 fresh-snapshot-sees-update -- 新快照首行=('S1', 81)
+[5] 快照过期/缺失的失败语义
+  PASS t5 missing-snapshot-blocks-next -- 已交付 3 行保留，query 标记未完成
+  PASS t5 reopen-after-loss-fails
+  PASS t5 failure-persisted -- {"type": "SnapshotExpired", "shard": ["S2"], "msg": "快照过期/缺失: ['S2']"}
+  PASS t5 tampered-snapshot-rejected
+[6] 持久状态写入中断后的恢复/失败语义
+  PASS t6 crash-injected
+  PASS t6 tmp-left-committed-kept
+  PASS t6 recover-after-crash -- rows=26
+  PASS t6 tmp-cleaned-on-reopen
+[7] 能力不兼容拒绝
+  PASS t7 incompatible-sort-rejected
+  PASS t7 page_size-101-rejected
+  PASS t7 negative-offset-rejected
+[8] 低 limit 非 tie 基准：取回行数（含 offset 跳过+lookahead）< 全量
+  PASS t8 low-limit-fetch<total -- fetched=255 vs total=16000 (1.6%)
+  PASS t8 correctness -- rows=5
+  PASS t8 ties-bounded-fetch -- fetched=461 vs total=16000
+  PASS t8 ties correctness -- rows=59
+[9] 读者重开预算（最多两次）
+  PASS t9 third-reopen-rejected
+  PASS t9 reopen-within-budget-works
+[10] 全 offset-only 拓扑与内存页审计
+  PASS t10 offset-only -- rows=40
+  PASS t10 peak-mem-pages<=shards -- peak=2 shards=2
+  PASS t10 only-offset-modes
+[11] 超大并列组（>max_page）跨分片完整补齐
+  PASS t11 mega-tie -- rows=14
+  PASS t11 all-14-ties-delivered -- tie rows=14
+  PASS t11 probe-pushdown-used -- probe shards=['T1', 'T3']
+[12] 重负载 8 x 2000（FULL_SCALE=False）
+  PASS t12 offset=0 limit=50 ties=True -- rows=119
+  PASS t12 offset=1000 limit=200 ties=False -- rows=200
+  PASS t12 bounded-fetch offset=1000 -- fetched=1392 total=16000
+  PASS t12 offset=15970 limit=100 ties=True -- rows=30
+  PASS t12 offset=0 limit=0 ties=False -- rows=0
+  PASS t12 reopen -- rows=315
+
+==== 汇总: 50 用例, 0 失败 ====

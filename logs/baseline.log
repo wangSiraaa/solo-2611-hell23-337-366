@@ -1,0 +1,1 @@
+{"baseline": [[100, "A", 1, "A1"], [90, "A", 2, "A2"], [90, "B", 1, "B1"]], "expected_ids": [["A", 1], ["A", 2], ["A", 3], ["A", 4], ["B", 1]], "tie_pushdown_loss_reproduced": true, "actual_shard_calls": {"A": [{"limit": 2, "rows": 2}], "B": [{"limit": 2, "rows": 2}]}}
