@@ -1,1 +1,2 @@
 pyarrow==19.0.1
+pytest==9.2.0
