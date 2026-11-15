@@ -1,0 +1,1 @@
+[{"producer": "P1", "schema": "a.schema.json", "batch": "a.arrow"}, {"receiver": "pause"}, {"producer": "P2", "schema": "b.schema.json", "batch": "b.arrow"}, {"receiver": "accept_schema_revision_2"}, {"receiver": "resume"}]

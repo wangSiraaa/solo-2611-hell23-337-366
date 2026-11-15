@@ -1,0 +1,35 @@
+{
+  "v1": {
+    "type_codes": {
+      "1": "branch-record",
+      "2": "branch-missing"
+    },
+    "branch-record": {
+      "qty": "field-quantity"
+    }
+  },
+  "v2": {
+    "type_codes": {
+      "5": "branch-record"
+    },
+    "branch-record": {
+      "count": "field-quantity",
+      "note": "field-note"
+    }
+  },
+  "recreated": {
+    "count": "field-new-quantity",
+    "note": "field-note"
+  },
+  "expected_old_nulls": [
+    {
+      "parent_row": 1,
+      "branch": "branch-missing"
+    },
+    {
+      "parent_row": 2,
+      "branch": "branch-record",
+      "child": null
+    }
+  ]
+}

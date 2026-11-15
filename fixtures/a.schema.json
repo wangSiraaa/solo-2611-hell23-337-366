@@ -1,0 +1,11 @@
+{
+  "schema_revision": 1,
+  "type_codes": {
+    "3": "branch-number",
+    "7": "branch-text"
+  },
+  "fields": {
+    "branch-number": "int64",
+    "branch-text": "text"
+  }
+}
