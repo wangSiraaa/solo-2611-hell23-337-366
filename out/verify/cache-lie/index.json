@@ -1,0 +1,115 @@
+{
+  "objects": {
+    "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8": {
+      "created_at": "2026-11-15T22:13:46.472212Z",
+      "provenance": [
+        {
+          "at": "2026-11-15T22:13:46.472224Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "later",
+            "data",
+            "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8"
+          ],
+          "replica_url": "replicas/later-range.bin"
+        }
+      ],
+      "refs": [
+        "lie"
+      ],
+      "size": 15
+    },
+    "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241": {
+      "created_at": "2026-11-15T22:13:46.474397Z",
+      "provenance": [
+        {
+          "at": "2026-11-15T22:13:46.474413Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "twin-a",
+            "data",
+            "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241"
+          ],
+          "replica_url": "replicas/twin-a.bin"
+        },
+        {
+          "at": "2026-11-15T22:13:46.476200Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "twin-b",
+            "data",
+            "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241"
+          ],
+          "replica_url": "replicas/twin-b.bin"
+        }
+      ],
+      "refs": [
+        "lie"
+      ],
+      "size": 64
+    },
+    "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d": {
+      "created_at": "2026-11-15T22:13:46.470166Z",
+      "provenance": [
+        {
+          "at": "2026-11-15T22:13:46.470183Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "edge",
+            "data",
+            "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d"
+          ],
+          "replica_url": "replicas/edge-fullonly.bin"
+        }
+      ],
+      "refs": [
+        "lie"
+      ],
+      "size": 18
+    },
+    "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92": {
+      "created_at": "2026-11-15T22:13:46.465799Z",
+      "provenance": [
+        {
+          "at": "2026-11-15T22:13:46.465810Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "center",
+            "data",
+            "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92"
+          ],
+          "replica_url": "replicas/center.bin"
+        }
+      ],
+      "refs": [
+        "lie"
+      ],
+      "size": 16
+    },
+    "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa": {
+      "created_at": "2026-11-15T22:13:46.463696Z",
+      "provenance": [
+        {
+          "at": "2026-11-15T22:13:46.463712Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "bigrange",
+            "data",
+            "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+          ],
+          "replica_url": "replicas/bigrange-range.bin"
+        }
+      ],
+      "refs": [
+        "lie"
+      ],
+      "size": 12288
+    }
+  }
+}

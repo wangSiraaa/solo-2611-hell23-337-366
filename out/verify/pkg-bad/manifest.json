@@ -1,0 +1,378 @@
+{
+  "access_log": [
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 12288,
+      "returned_bytes": 12288,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/center.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 16,
+      "returned_bytes": 16,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/center.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/dateline-stale.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 33,
+      "returned_bytes": 33,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/dateline-stale.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/dateline-current.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 33,
+      "returned_bytes": 33,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/dateline-current.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "missing",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "error",
+      "url": "replicas/edge-missing.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "unavailable",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "error",
+      "url": "replicas/edge-fail.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "unavailable",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "error",
+      "url": "replicas/edge-fullonly.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/later-range.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 15,
+      "returned_bytes": 15,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/later-range.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/twin-a.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 64,
+      "returned_bytes": 64,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/twin-a.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/twin-b.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 64,
+      "returned_bytes": 64,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/twin-b.bin"
+    }
+  ],
+  "access_totals": {
+    "calls": 17,
+    "requested_bytes": 12513,
+    "returned_bytes": 12513
+  },
+  "asset_count": 7,
+  "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+  "cache_stats": {
+    "discarded_temps": 0,
+    "duplicate_verifications": 0,
+    "footprint_bytes": 12416,
+    "hits": 1,
+    "objects": 5,
+    "publishes": 5
+  },
+  "complete": false,
+  "failed_identities": [
+    {
+      "identity": [
+        "corp",
+        "edge",
+        "data",
+        "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d"
+      ],
+      "reason": "all 3 replicas failed: [{'replica': 'replicas/edge-missing.bin', 'error': 'replicas/edge-missing.bin: no such file'}, {'replica': 'replicas/edge-fail.bin', 'error': 'replicas/edge-fail.bin: unavailable'}, {'replica': 'replicas/edge-fullonly.bin', 'error': 'replicas/edge-fullonly.bin: unavailable'}]"
+    }
+  ],
+  "ok_count": 6,
+  "package_format": "verified-asset-package/1",
+  "plan_id": "all-bad",
+  "results": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "full-file",
+      "object": "objects/8d/8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa",
+      "partial": false,
+      "replica_used": "replicas/bigrange-range.bin",
+      "size": 12288,
+      "status": "ok",
+      "verified": "full-file sha256"
+    },
+    {
+      "identity": [
+        "corp",
+        "center",
+        "data",
+        "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92"
+      ],
+      "mode": "full-file",
+      "object": "objects/79/79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92",
+      "partial": false,
+      "replica_used": "replicas/center.bin",
+      "size": 16,
+      "status": "ok",
+      "verified": "full-file sha256"
+    },
+    {
+      "identity": [
+        "corp",
+        "dateline",
+        "data",
+        "4e5a5266e414cbf8917f775b27df2ee87f9de8cb95a3ab976c5add496b01244a"
+      ],
+      "mode": "full-file",
+      "object": "objects/4e/4e5a5266e414cbf8917f775b27df2ee87f9de8cb95a3ab976c5add496b01244a",
+      "partial": false,
+      "replica_used": "replicas/dateline-current.bin",
+      "size": 33,
+      "status": "ok",
+      "verified": "full-file sha256"
+    },
+    {
+      "identity": [
+        "corp",
+        "edge",
+        "data",
+        "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d"
+      ],
+      "reason": "all 3 replicas failed: [{'replica': 'replicas/edge-missing.bin', 'error': 'replicas/edge-missing.bin: no such file'}, {'replica': 'replicas/edge-fail.bin', 'error': 'replicas/edge-fail.bin: unavailable'}, {'replica': 'replicas/edge-fullonly.bin', 'error': 'replicas/edge-fullonly.bin: unavailable'}]",
+      "status": "failed"
+    },
+    {
+      "identity": [
+        "corp",
+        "later",
+        "data",
+        "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8"
+      ],
+      "mode": "full-file",
+      "object": "objects/10/10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8",
+      "partial": false,
+      "replica_used": "replicas/later-range.bin",
+      "size": 15,
+      "status": "ok",
+      "verified": "full-file sha256"
+    },
+    {
+      "identity": [
+        "corp",
+        "twin-a",
+        "data",
+        "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241"
+      ],
+      "mode": "full-file",
+      "object": "objects/39/39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+      "partial": false,
+      "replica_used": "replicas/twin-a.bin",
+      "size": 64,
+      "status": "ok",
+      "verified": "full-file sha256"
+    },
+    {
+      "identity": [
+        "corp",
+        "twin-b",
+        "data",
+        "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241"
+      ],
+      "mode": "full-file",
+      "object": "objects/39/39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+      "partial": false,
+      "replica_used": "replicas/twin-b.bin",
+      "size": 64,
+      "status": "ok",
+      "verified": "full-file sha256"
+    }
+  ],
+  "selection_decisions": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    },
+    {
+      "identity": [
+        "corp",
+        "center",
+        "data",
+        "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    },
+    {
+      "identity": [
+        "corp",
+        "dateline",
+        "data",
+        "4e5a5266e414cbf8917f775b27df2ee87f9de8cb95a3ab976c5add496b01244a"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    },
+    {
+      "identity": [
+        "corp",
+        "edge",
+        "data",
+        "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    },
+    {
+      "identity": [
+        "corp",
+        "later",
+        "data",
+        "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    },
+    {
+      "identity": [
+        "corp",
+        "twin-a",
+        "data",
+        "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    },
+    {
+      "identity": [
+        "corp",
+        "twin-b",
+        "data",
+        "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    }
+  ]
+}

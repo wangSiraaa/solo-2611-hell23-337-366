@@ -1,0 +1,24 @@
+{
+  "objects": {
+    "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193": {
+      "created_at": "2026-11-15T22:13:46.488508Z",
+      "provenance": [
+        {
+          "at": "2026-11-15T22:13:46.488522Z",
+          "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+          "identity": [
+            "corp",
+            "bigrange",
+            "data",
+            "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+          ],
+          "replica_url": "replicas/bigrange-range.bin"
+        }
+      ],
+      "refs": [
+        "r2"
+      ],
+      "size": 4096
+    }
+  }
+}

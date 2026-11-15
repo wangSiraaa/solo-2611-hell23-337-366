@@ -1,0 +1,57 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "twin-b",
+  "collection": "corp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          10,
+          10
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          10
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    10,
+    10,
+    11,
+    11
+  ],
+  "properties": {
+    "datetime": "2026-01-04T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../../replicas/twin-b.bin",
+      "type": "application/octet-stream",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

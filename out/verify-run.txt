@@ -1,0 +1,109 @@
+{
+  "fixtures": "/workspace/fixtures",
+  "items": 7,
+  "replicas": 11
+}
+
+=== build: immutable SQLite catalog, self-contained reread ===
+  PASS build returns a sha256 build id
+  PASS one build present
+  PASS reread catalog without source JSON: 7 items
+  PASS reread catalog: 7 assets
+  PASS reread catalog: real rectangle parts stored
+  PASS dateline item keeps two real parts (not one wide bbox)
+  PASS duplicate item path recorded as warning
+  PASS dangling link recorded as warning
+  PASS stale replica content detected at build
+  PASS unavailable replica detected at build
+
+=== plan-query: dateline split, exact parts, closed time ===
+  PASS wrap query splits into two dateline pieces
+  PASS wrap hits match spatial oracle
+  PASS wrap matches BOTH real dateline parts
+  PASS later rejected on time in wrap window
+  PASS center bbox never false-hits the dateline item
+  PASS false-bbox plan matches oracle
+  PASS dateline is not even a spatial candidate
+  PASS edge-touch plan matches oracle (boundary counts)
+  PASS edge item hit on shared boundary
+  PASS center included at its closing instant (closed interval)
+  PASS center excluded one second after close
+  PASS center excluded before opening instant
+  PASS 60-query sweep always agrees with spatial oracle
+
+=== fetch-query: real verification, fallback, incomplete package ===
+  PASS dateline fetched from current, not stale replica
+  PASS dateline package bytes equal byte oracle (current file)
+  PASS dateline content sha256 verified
+  PASS stale replica was really GET then rejected
+  PASS edge fell back to the whole-file-only good replica
+  PASS edge tried all three replica URLs in order
+  PASS edge package bytes equal byte oracle
+  PASS whole-file replica GET had no range start (full read)
+  PASS twin assets share one content-addressed cache object
+  PASS shared object retains both item/asset provenance
+  PASS same asset_key across items is NOT merged
+  PASS package marked incomplete when an asset fails
+  PASS failed identity listed explicitly
+  PASS other assets still delivered in incomplete package
+  PASS HEAD size lie detected and recorded as failure
+
+=== range fetch: block verification, cross-block, no over-claim ===
+  PASS single-block request uses block mode
+  PASS block GET returned only one 4096 block
+  PASS packaged bytes equal byte oracle slice (block 0)
+  PASS only read block claimed verified; block 1/2 not claimed
+  PASS cross-block request stays in block mode (threshold 0.9)
+  PASS adjacent blocks coalesced into one range GET
+  PASS cross-block blob equals byte oracle [0:8192)
+  PASS blocks 0 and 1 verified, block 2 never claimed
+  PASS corrupted block digest fails the asset (no silent accept)
+  PASS corrupted range replica triggers whole-file fallback recovery
+  PASS second overlapping query reads zero replica bytes (cache hit)
+  PASS shared-block plan beats full-file baseline (4096 < 24576)
+  PASS no range replica -> full-file mode chosen
+  PASS full 12288 bytes really read despite small range request
+  PASS packaged slice still equals the requested oracle bytes
+
+=== concurrency: deterministic interleaving, no half-written share ===
+  PASS concurrency cache starts empty
+  PASS thread A parked with a private temp file
+  PASS half-written temp is NOT visible in the cache
+  PASS both concurrent workers succeeded
+  PASS exactly one content object (race resolved without duplication)
+  PASS no temp files left behind
+  PASS both plans hold references on the shared object
+  PASS pkg-conc-A packaged bytes match oracle
+  PASS pkg-conc-B packaged bytes match oracle
+  PASS all three control points fired
+  PASS control points ordered get -> verify -> publish
+
+=== build pinning, snapshot provenance, same-URL content swap ===
+  PASS new snapshot creates a distinct build id
+  PASS old plan stays pinned to the old build id
+  PASS old plan keeps the old replica set (v2 url absent)
+  PASS swapped same-URL range replica rejected; fell back
+  PASS pinned content still equals the original byte oracle
+  PASS fixture restored after swap test
+
+=== lifecycle: plan release reaps only unreferenced cache ===
+  PASS shared block referenced by both plans before release
+  PASS releasing L1 keeps the block (L2 still references it)
+  PASS releasing last plan reaps the block; footprint zero
+
+=== validation: identity conflicts, limits, malformed geometry ===
+  PASS identity conflict (same key, two content shas) rejected
+  PASS duplicate manifest record for one identity rejected
+  PASS fourth replica rejected (limit 3)
+  PASS duplicate Item id rejected
+  PASS item referencing unknown collection rejected
+  PASS non-rectangular polygon rejected
+  PASS inverted item time interval rejected
+
+=== inspect: reread SQLite + package manifests from disk ===
+  PASS package manifest reread from disk
+  PASS packaged objects rehash to their content sha256
+  PASS reopened DB still resolves both builds
+  PASS reopened DB reproduces the no-false-hit result
+
+84 passed, 0 failed

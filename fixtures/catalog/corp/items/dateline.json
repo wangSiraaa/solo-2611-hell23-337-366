@@ -1,0 +1,83 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "dateline",
+  "collection": "corp",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            179,
+            -1
+          ],
+          [
+            180,
+            -1
+          ],
+          [
+            180,
+            1
+          ],
+          [
+            179,
+            1
+          ],
+          [
+            179,
+            -1
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            -180,
+            -1
+          ],
+          [
+            -179,
+            -1
+          ],
+          [
+            -179,
+            1
+          ],
+          [
+            -180,
+            1
+          ],
+          [
+            -180,
+            -1
+          ]
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -180,
+    -1,
+    180,
+    1
+  ],
+  "properties": {
+    "datetime": "2026-01-01T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../../replicas/dateline-current.bin",
+      "type": "application/octet-stream",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

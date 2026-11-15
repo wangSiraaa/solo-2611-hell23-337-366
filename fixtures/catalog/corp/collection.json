@@ -1,0 +1,65 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "corp",
+  "description": "synthetic",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-01-01T00:00:00Z",
+          "2026-02-01T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "item",
+      "href": "items/dateline.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/center.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/edge.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/later.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/twin-a.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/twin-b.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/bigrange.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/../items/dateline.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/missing.json"
+    }
+  ]
+}

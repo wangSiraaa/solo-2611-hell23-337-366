@@ -1,0 +1,1 @@
+{"type": "Feature", "id": "same", "collection": "c", "geometry": {"type": "Polygon", "coordinates": [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]}, "bbox": [0, 0, 1, 1], "properties": {"datetime": "2026-01-01T00:00:00Z"}, "assets": {}}

@@ -1,0 +1,467 @@
+{
+  "checks": [
+    {
+      "name": "build: immutable SQLite catalog, self-contained reread",
+      "status": "SECTION"
+    },
+    {
+      "detail": "",
+      "name": "build returns a sha256 build id",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "one build present",
+      "status": "PASS"
+    },
+    {
+      "detail": "7",
+      "name": "reread catalog without source JSON: 7 items",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "reread catalog: 7 assets",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "reread catalog: real rectangle parts stored",
+      "status": "PASS"
+    },
+    {
+      "detail": "2",
+      "name": "dateline item keeps two real parts (not one wide bbox)",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'replica_hash_mismatch', 'replica_unavailable', 'missing_link_target', 'duplicate_item_link', 'stale_replica_content'}",
+      "name": "duplicate item path recorded as warning",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'replica_hash_mismatch', 'replica_unavailable', 'missing_link_target', 'duplicate_item_link', 'stale_replica_content'}",
+      "name": "dangling link recorded as warning",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'replica_hash_mismatch', 'replica_unavailable', 'missing_link_target', 'duplicate_item_link', 'stale_replica_content'}",
+      "name": "stale replica content detected at build",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'replica_hash_mismatch', 'replica_unavailable', 'missing_link_target', 'duplicate_item_link', 'stale_replica_content'}",
+      "name": "unavailable replica detected at build",
+      "status": "PASS"
+    },
+    {
+      "name": "plan-query: dateline split, exact parts, closed time",
+      "status": "SECTION"
+    },
+    {
+      "detail": "[(179.5, -2.0, 180.0, 2.0), (-180.0, -2.0, -179.5, 2.0)]",
+      "name": "wrap query splits into two dateline pieces",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'dateline': [0, 1]} vs {'dateline': [0, 1]}",
+      "name": "wrap hits match spatial oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": "[0, 1]",
+      "name": "wrap matches BOTH real dateline parts",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "later rejected on time in wrap window",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'center': [0]}",
+      "name": "center bbox never false-hits the dateline item",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'center': [0]} vs {'center': [0]}",
+      "name": "false-bbox plan matches oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "dateline is not even a spatial candidate",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'center': [0], 'edge': [0]} vs {'edge': [0], 'center': [0]}",
+      "name": "edge-touch plan matches oracle (boundary counts)",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "edge item hit on shared boundary",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "center included at its closing instant (closed interval)",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "center excluded one second after close",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "center excluded before opening instant",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "60-query sweep always agrees with spatial oracle",
+      "status": "PASS"
+    },
+    {
+      "name": "fetch-query: real verification, fallback, incomplete package",
+      "status": "SECTION"
+    },
+    {
+      "detail": "replicas/dateline-current.bin",
+      "name": "dateline fetched from current, not stale replica",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "dateline package bytes equal byte oracle (current file)",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "dateline content sha256 verified",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "stale replica was really GET then rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "edge fell back to the whole-file-only good replica",
+      "status": "PASS"
+    },
+    {
+      "detail": "['replicas/edge-missing.bin', 'replicas/edge-fail.bin', 'replicas/edge-fullonly.bin']",
+      "name": "edge tried all three replica URLs in order",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "edge package bytes equal byte oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "whole-file replica GET had no range start (full read)",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'objects': 6, 'footprint_bytes': 12434, 'hits': 1, 'publishes': 6, 'discarded_temps': 0, 'duplicate_verifications': 0}",
+      "name": "twin assets share one content-addressed cache object",
+      "status": "PASS"
+    },
+    {
+      "detail": "{('corp', 'twin-a', 'data'), ('corp', 'twin-b', 'data')}",
+      "name": "shared object retains both item/asset provenance",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "same asset_key across items is NOT merged",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "package marked incomplete when an asset fails",
+      "status": "PASS"
+    },
+    {
+      "detail": "[['corp', 'edge', 'data', '5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d']]",
+      "name": "failed identity listed explicitly",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "other assets still delivered in incomplete package",
+      "status": "PASS"
+    },
+    {
+      "detail": "all 2 replicas failed: [{'replica': 'replicas/dateline-stale.bin', 'error': 'content hash mismatch: e7684889fcb8 != 4e5a5266e414'}, {'replica': 'replicas/dateline-current.bin', 'error': 'HEAD size 999 disagrees with catalog size 33'}]",
+      "name": "HEAD size lie detected and recorded as failure",
+      "status": "PASS"
+    },
+    {
+      "name": "range fetch: block verification, cross-block, no over-claim",
+      "status": "SECTION"
+    },
+    {
+      "detail": "block",
+      "name": "single-block request uses block mode",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'calls': 3, 'requested_bytes': 4096, 'returned_bytes': 4096}",
+      "name": "block GET returned only one 4096 block",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "packaged bytes equal byte oracle slice (block 0)",
+      "status": "PASS"
+    },
+    {
+      "detail": "[0]",
+      "name": "only read block claimed verified; block 1/2 not claimed",
+      "status": "PASS"
+    },
+    {
+      "detail": "block",
+      "name": "cross-block request stays in block mode (threshold 0.9)",
+      "status": "PASS"
+    },
+    {
+      "detail": "[(0, 8192)]",
+      "name": "adjacent blocks coalesced into one range GET",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "cross-block blob equals byte oracle [0:8192)",
+      "status": "PASS"
+    },
+    {
+      "detail": "[0, 4096]",
+      "name": "blocks 0 and 1 verified, block 2 never claimed",
+      "status": "PASS"
+    },
+    {
+      "detail": "[{'identity': ['corp', 'bigrange', 'data', '8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa'], 'reason': \"block fetch incomplete; missing blocks [4096]; replica errors [{'replica': 'replicas/bigrange-range.bin', 'error': 'block 4096 digest mismatch on replicas/bigrange-range.bin'}]\"}]",
+      "name": "corrupted block digest fails the asset (no silent accept)",
+      "status": "PASS"
+    },
+    {
+      "detail": "replicas/bigrange-full.bin",
+      "name": "corrupted range replica triggers whole-file fallback recovery",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'calls': 1, 'requested_bytes': 0, 'returned_bytes': 0}",
+      "name": "second overlapping query reads zero replica bytes (cache hit)",
+      "status": "PASS"
+    },
+    {
+      "detail": "4096 vs 24576",
+      "name": "shared-block plan beats full-file baseline (4096 < 24576)",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "no range replica -> full-file mode chosen",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'calls': 4, 'requested_bytes': 12288, 'returned_bytes': 12288}",
+      "name": "full 12288 bytes really read despite small range request",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "packaged slice still equals the requested oracle bytes",
+      "status": "PASS"
+    },
+    {
+      "name": "concurrency: deterministic interleaving, no half-written share",
+      "status": "SECTION"
+    },
+    {
+      "detail": "",
+      "name": "concurrency cache starts empty",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "thread A parked with a private temp file",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'tmp_exists': True, 'published_during_halfwrite': False, 'get_during_halfwrite': None}",
+      "name": "half-written temp is NOT visible in the cache",
+      "status": "PASS"
+    },
+    {
+      "detail": "[]",
+      "name": "both concurrent workers succeeded",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'objects': 1, 'footprint_bytes': 12288, 'hits': 1, 'publishes': 1, 'discarded_temps': 0, 'duplicate_verifications': 0}",
+      "name": "exactly one content object (race resolved without duplication)",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "no temp files left behind",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "both plans hold references on the shared object",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "pkg-conc-A packaged bytes match oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "pkg-conc-B packaged bytes match oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": "['before_get', 'after_get_before_verify', 'before_publish']",
+      "name": "all three control points fired",
+      "status": "PASS"
+    },
+    {
+      "detail": "['before_get', 'after_get_before_verify', 'before_publish']",
+      "name": "control points ordered get -> verify -> publish",
+      "status": "PASS"
+    },
+    {
+      "name": "build pinning, snapshot provenance, same-URL content swap",
+      "status": "SECTION"
+    },
+    {
+      "detail": "",
+      "name": "new snapshot creates a distinct build id",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "old plan stays pinned to the old build id",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "old plan keeps the old replica set (v2 url absent)",
+      "status": "PASS"
+    },
+    {
+      "detail": "replicas/bigrange-full.bin",
+      "name": "swapped same-URL range replica rejected; fell back",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "pinned content still equals the original byte oracle",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "fixture restored after swap test",
+      "status": "PASS"
+    },
+    {
+      "name": "lifecycle: plan release reaps only unreferenced cache",
+      "status": "SECTION"
+    },
+    {
+      "detail": "",
+      "name": "shared block referenced by both plans before release",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "releasing L1 keeps the block (L2 still references it)",
+      "status": "PASS"
+    },
+    {
+      "detail": "{'objects': 0, 'footprint_bytes': 0, 'hits': 1, 'publishes': 1, 'discarded_temps': 0, 'duplicate_verifications': 0}",
+      "name": "releasing last plan reaps the block; footprint zero",
+      "status": "PASS"
+    },
+    {
+      "name": "validation: identity conflicts, limits, malformed geometry",
+      "status": "SECTION"
+    },
+    {
+      "detail": "asset identity conflict for ('corp', 'dateline', 'data'): content_sha256 4e5a526",
+      "name": "identity conflict (same key, two content shas) rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "duplicate manifest record for ('corp', 'dateline', 'data')",
+      "name": "duplicate manifest record for one identity rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "/workspace/out/verify/many.json: asset corp/dateline/data needs 1..3 replicas",
+      "name": "fourth replica rejected (limit 3)",
+      "status": "PASS"
+    },
+    {
+      "detail": "duplicate Item id 'same'",
+      "name": "duplicate Item id rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "item 'same' references unknown collection 'nope'",
+      "name": "item referencing unknown collection rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "rectangle ring must have exactly 5 positions",
+      "name": "non-rectangular polygon rejected",
+      "status": "PASS"
+    },
+    {
+      "detail": "item 'same': start_datetime > end",
+      "name": "inverted item time interval rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "inspect: reread SQLite + package manifests from disk",
+      "status": "SECTION"
+    },
+    {
+      "detail": "",
+      "name": "package manifest reread from disk",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "packaged objects rehash to their content sha256",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "reopened DB still resolves both builds",
+      "status": "PASS"
+    },
+    {
+      "detail": "",
+      "name": "reopened DB reproduces the no-false-hit result",
+      "status": "PASS"
+    }
+  ],
+  "failed": 0,
+  "passed": 84,
+  "summary": {
+    "failed": 0,
+    "passed": 84,
+    "total": 84
+  }
+}

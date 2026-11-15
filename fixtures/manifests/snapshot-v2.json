@@ -1,0 +1,212 @@
+{
+  "assets": [
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 33,
+          "sha256": "4e5a5266e414cbf8917f775b27df2ee87f9de8cb95a3ab976c5add496b01244a",
+          "start": 0
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "4e5a5266e414cbf8917f775b27df2ee87f9de8cb95a3ab976c5add496b01244a",
+      "item": "dateline",
+      "replicas": [
+        {
+          "logical_version": "v0",
+          "range_capable": true,
+          "sha256": "e7684889fcb8d239527560cad7b0a91445b4f788fc4832ceabaa0d0a08489d42",
+          "size": 33,
+          "url": "replicas/dateline-stale.bin"
+        },
+        {
+          "logical_version": "v1",
+          "range_capable": true,
+          "sha256": "4e5a5266e414cbf8917f775b27df2ee87f9de8cb95a3ab976c5add496b01244a",
+          "size": 33,
+          "url": "replicas/dateline-current.bin"
+        }
+      ],
+      "size": 33
+    },
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 16,
+          "sha256": "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92",
+          "start": 0
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92",
+      "item": "center",
+      "replicas": [
+        {
+          "logical_version": "v1",
+          "range_capable": true,
+          "sha256": "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92",
+          "size": 16,
+          "url": "replicas/center.bin"
+        },
+        {
+          "logical_version": "v2",
+          "range_capable": true,
+          "sha256": "79df1aefc56e5cc8fea85283cef64735c410dc88ac96532a564d3cb393c59a92",
+          "size": 16,
+          "url": "replicas/center-v2.bin"
+        }
+      ],
+      "size": 16
+    },
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 18,
+          "sha256": "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d",
+          "start": 0
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d",
+      "item": "edge",
+      "replicas": [
+        {
+          "logical_version": "v1",
+          "range_capable": false,
+          "sha256": "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d",
+          "size": 18,
+          "url": "replicas/edge-missing.bin"
+        },
+        {
+          "logical_version": "v1",
+          "range_capable": false,
+          "sha256": "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d",
+          "size": 18,
+          "url": "replicas/edge-fail.bin"
+        },
+        {
+          "logical_version": "v1",
+          "range_capable": false,
+          "sha256": "5a5b67057293d8c2e48ac6aed7a8546651fd6ddc4c474cc059208c6c5bd3b60d",
+          "size": 18,
+          "url": "replicas/edge-fullonly.bin"
+        }
+      ],
+      "size": 18
+    },
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 15,
+          "sha256": "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8",
+          "start": 0
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8",
+      "item": "later",
+      "replicas": [
+        {
+          "logical_version": "v1",
+          "range_capable": true,
+          "sha256": "10bda0d0835a05ba5ee1a8500c73de68fde5cd57d52a6cc0ebc81804f956ade8",
+          "size": 15,
+          "url": "replicas/later-range.bin"
+        }
+      ],
+      "size": 15
+    },
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 64,
+          "sha256": "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+          "start": 0
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+      "item": "twin-a",
+      "replicas": [
+        {
+          "logical_version": "v1",
+          "range_capable": true,
+          "sha256": "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+          "size": 64,
+          "url": "replicas/twin-a.bin"
+        }
+      ],
+      "size": 64
+    },
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 64,
+          "sha256": "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+          "start": 0
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+      "item": "twin-b",
+      "replicas": [
+        {
+          "logical_version": "v1",
+          "range_capable": true,
+          "sha256": "39e3d7b6b5d075d37d053ad89b24b41bef4f3c29760c84447cab3f3be1882241",
+          "size": 64,
+          "url": "replicas/twin-b.bin"
+        }
+      ],
+      "size": 64
+    },
+    {
+      "asset_key": "data",
+      "blocks": [
+        {
+          "end": 4096,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "start": 0
+        },
+        {
+          "end": 8192,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "start": 4096
+        },
+        {
+          "end": 12288,
+          "sha256": "c8f5d0341d54d951a71b136e6e2afcb14d11ed8489a7ae126a8fee0df6ecf193",
+          "start": 8192
+        }
+      ],
+      "collection": "corp",
+      "content_sha256": "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa",
+      "item": "bigrange",
+      "replicas": [
+        {
+          "logical_version": "v1",
+          "range_capable": true,
+          "sha256": "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa",
+          "size": 12288,
+          "url": "replicas/bigrange-range.bin"
+        },
+        {
+          "logical_version": "v1",
+          "range_capable": false,
+          "sha256": "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa",
+          "size": 12288,
+          "url": "replicas/bigrange-full.bin"
+        }
+      ],
+      "size": 12288
+    }
+  ],
+  "format": "stac-replica-manifest/1",
+  "snapshot": "v1"
+}

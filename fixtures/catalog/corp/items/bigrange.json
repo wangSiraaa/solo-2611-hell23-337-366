@@ -1,0 +1,57 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "bigrange",
+  "collection": "corp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          20,
+          20
+        ],
+        [
+          21,
+          20
+        ],
+        [
+          21,
+          21
+        ],
+        [
+          20,
+          21
+        ],
+        [
+          20,
+          20
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    20,
+    20,
+    21,
+    21
+  ],
+  "properties": {
+    "datetime": "2026-01-05T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../../replicas/bigrange-range.bin",
+      "type": "application/octet-stream",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

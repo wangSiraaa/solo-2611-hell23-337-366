@@ -1,0 +1,73 @@
+{
+  "access_log": [
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 12288,
+      "returned_bytes": 12288,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    }
+  ],
+  "access_totals": {
+    "calls": 2,
+    "requested_bytes": 12288,
+    "returned_bytes": 12288
+  },
+  "asset_count": 1,
+  "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+  "cache_stats": {
+    "discarded_temps": 0,
+    "duplicate_verifications": 0,
+    "footprint_bytes": 12288,
+    "hits": 1,
+    "objects": 1,
+    "publishes": 1
+  },
+  "complete": true,
+  "failed_identities": [],
+  "ok_count": 1,
+  "package_format": "verified-asset-package/1",
+  "plan_id": "conc-A",
+  "results": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "full-file",
+      "object": "objects/8d/8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa",
+      "partial": false,
+      "replica_used": "replicas/bigrange-range.bin",
+      "size": 12288,
+      "status": "ok",
+      "verified": "full-file sha256"
+    }
+  ],
+  "selection_decisions": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "full-file",
+      "rationale": "whole asset requested"
+    }
+  ]
+}

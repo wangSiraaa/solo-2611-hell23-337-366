@@ -1,0 +1,57 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "edge",
+  "collection": "corp",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    1,
+    1,
+    2,
+    2
+  ],
+  "properties": {
+    "datetime": "2026-01-02T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../../replicas/edge.bin",
+      "type": "application/octet-stream",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

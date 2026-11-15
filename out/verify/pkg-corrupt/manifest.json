@@ -1,0 +1,88 @@
+{
+  "access_log": [
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": 8192,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 8192,
+      "returned_bytes": 8192,
+      "start": 0,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    }
+  ],
+  "access_totals": {
+    "calls": 3,
+    "requested_bytes": 8192,
+    "returned_bytes": 8192
+  },
+  "asset_count": 1,
+  "build_id": "312730d7b43cb277f4f6f8fb79c8130ecfdd9c96b1b7430fbfb5f309135a3b56",
+  "cache_stats": {
+    "discarded_temps": 0,
+    "duplicate_verifications": 0,
+    "footprint_bytes": 4096,
+    "hits": 0,
+    "objects": 1,
+    "publishes": 1
+  },
+  "complete": false,
+  "failed_identities": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "reason": "block fetch incomplete; missing blocks [4096]; replica errors [{'replica': 'replicas/bigrange-range.bin', 'error': 'block 4096 digest mismatch on replicas/bigrange-range.bin'}]"
+    }
+  ],
+  "ok_count": 0,
+  "package_format": "verified-asset-package/1",
+  "plan_id": "rc",
+  "results": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "reason": "block fetch incomplete; missing blocks [4096]; replica errors [{'replica': 'replicas/bigrange-range.bin', 'error': 'block 4096 digest mismatch on replicas/bigrange-range.bin'}]",
+      "status": "failed"
+    }
+  ],
+  "selection_decisions": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "block",
+      "rationale": "coverage 0.67, 2 blocks fetched via range"
+    }
+  ]
+}

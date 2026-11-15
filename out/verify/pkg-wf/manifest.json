@@ -1,0 +1,113 @@
+{
+  "access_log": [
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "unavailable",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "error",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "unavailable",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "error",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-full.bin"
+    },
+    {
+      "end": null,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 12288,
+      "returned_bytes": 12288,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-full.bin"
+    }
+  ],
+  "access_totals": {
+    "calls": 4,
+    "requested_bytes": 12288,
+    "returned_bytes": 12288
+  },
+  "asset_count": 1,
+  "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+  "cache_stats": {
+    "discarded_temps": 0,
+    "duplicate_verifications": 0,
+    "footprint_bytes": 0,
+    "hits": 0,
+    "objects": 0,
+    "publishes": 0
+  },
+  "complete": true,
+  "failed_identities": [],
+  "ok_count": 1,
+  "package_format": "verified-asset-package/1",
+  "plan_id": "wf",
+  "results": [
+    {
+      "cached_blocks": [],
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "full-file",
+      "object": "ranges/bigrange_data__100-200.bin",
+      "partial": true,
+      "replica_used": "replicas/bigrange-full.bin",
+      "requested_range": [
+        100,
+        200
+      ],
+      "size": 100,
+      "status": "ok",
+      "unverified_claim": "blocks outside the request were not read and are not claimed verified",
+      "verified": "full-file sha256; whole file read, only the requested slice packaged",
+      "verified_blob_range": [
+        100,
+        200
+      ]
+    }
+  ],
+  "selection_decisions": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "block",
+      "rationale": "coverage 0.33, 1 blocks fetched via range"
+    },
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "full-file",
+      "rationale": "planned block mode but no range replica is currently usable; whole-file fallback"
+    }
+  ]
+}

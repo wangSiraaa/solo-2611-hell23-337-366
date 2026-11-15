@@ -1,0 +1,96 @@
+{
+  "access_log": [
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": null,
+      "method": "HEAD",
+      "note": "",
+      "requested_bytes": 0,
+      "returned_bytes": 0,
+      "start": null,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    },
+    {
+      "end": 4096,
+      "method": "GET",
+      "note": "",
+      "requested_bytes": 4096,
+      "returned_bytes": 4096,
+      "start": 0,
+      "status": "ok",
+      "url": "replicas/bigrange-range.bin"
+    }
+  ],
+  "access_totals": {
+    "calls": 3,
+    "requested_bytes": 4096,
+    "returned_bytes": 4096
+  },
+  "asset_count": 1,
+  "build_id": "8c033019c6ee8dedc98506e18e04e5e0a688cafa2a3f0daecc796e2ee6a8c883",
+  "cache_stats": {
+    "discarded_temps": 0,
+    "duplicate_verifications": 0,
+    "footprint_bytes": 4096,
+    "hits": 0,
+    "objects": 1,
+    "publishes": 1
+  },
+  "complete": true,
+  "failed_identities": [],
+  "ok_count": 1,
+  "package_format": "verified-asset-package/1",
+  "plan_id": "q1",
+  "results": [
+    {
+      "cached_blocks": [],
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "block",
+      "object": "ranges/bigrange_data__100-200.bin",
+      "partial": true,
+      "replica_used": "replicas/bigrange-range.bin",
+      "requested_range": [
+        100,
+        200
+      ],
+      "size": 4096,
+      "status": "ok",
+      "unverified_claim": "blocks outside the request were not read and are not claimed verified",
+      "verified": "per-block sha256 on read blocks only; 0 block(s) served from cache",
+      "verified_blob_range": [
+        0,
+        4096
+      ],
+      "verified_blocks": [
+        0
+      ]
+    }
+  ],
+  "selection_decisions": [
+    {
+      "identity": [
+        "corp",
+        "bigrange",
+        "data",
+        "8dec5fb0de8a0b457c0cf7be559e4ef488e9cf39d5ddb0ff7464b23372ab21fa"
+      ],
+      "mode": "block",
+      "rationale": "coverage 0.33, 1 blocks fetched via range"
+    }
+  ]
+}
