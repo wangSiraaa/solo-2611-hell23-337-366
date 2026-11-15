@@ -1,0 +1,1 @@
+<osm version="0.6"><node id="1" lon="0" lat="0"/><node id="2" lon="2" lat="0"/><node id="3" lon="2" lat="2"/><node id="4" lon="0" lat="2"/><way id="11"><nd ref="1"/><nd ref="2"/><nd ref="3"/><nd ref="4"/><nd ref="1"/></way><relation id="21"><member type="way" ref="11" role="outer"/><tag k="type" v="multipolygon"/></relation></osm>

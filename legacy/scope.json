@@ -1,0 +1,11 @@
+{
+  "question_id": "312",
+  "scope_limits": [
+    "仅type=multipolygon、成员为way、角色outer/inner",
+    "每关系至多20way、100node，局部非跨日期线坐标",
+    "允许Shapely；不做修复、道路转向或嵌套relation"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}

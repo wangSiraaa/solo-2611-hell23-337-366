@@ -1,0 +1,15 @@
+{
+  "nodes": [
+    {
+      "id": 2,
+      "old_version": 1,
+      "new_version": 2,
+      "lon": 2,
+      "lat": 3
+    }
+  ],
+  "expected_validity": {
+    "21": false,
+    "22": true
+  }
+}
