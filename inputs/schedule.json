@@ -1,0 +1,14 @@
+[
+  {
+    "at": "after_page_1",
+    "action": "revoke_tenant_a"
+  },
+  {
+    "at": "before_page_2",
+    "action": "insert_tenant_b_same_score"
+  },
+  {
+    "at": "reopen_process",
+    "action": "resume_token"
+  }
+]

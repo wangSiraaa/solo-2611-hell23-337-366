@@ -1,0 +1,34 @@
+[
+  {
+    "id": "p1",
+    "table": "records",
+    "order": [
+      {
+        "column": "region",
+        "direction": "asc",
+        "nulls": "last"
+      },
+      {
+        "column": "score",
+        "direction": "desc",
+        "nulls": "first"
+      }
+    ]
+  },
+  {
+    "id": "p2",
+    "table": "records",
+    "order": [
+      {
+        "column": "score",
+        "direction": "asc",
+        "nulls": "last"
+      },
+      {
+        "column": "region",
+        "direction": "desc",
+        "nulls": "first"
+      }
+    ]
+  }
+]

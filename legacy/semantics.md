@@ -1,0 +1,3 @@
+source.sqlite为只读冻结单文件SQLite库，不带WAL；表records固定row_id:text唯一非NULL、region:text|NULL、score:integer|NULL、note:text。order使用region/score各至多一次，至少一项，direction=asc/desc，nulls=first/last；row_id ASC二进制排序自动追加，保证全序。文本按SQLite BINARY，不做locale/NFC；空文本非NULL。页size 1..10。
+游标是可解码的版本化数据，包含source文件SHA256、完整规范order、最后返回行row_id及类型化排序值。NULL显式标签，不转字符串。cursor来自上一页最后返回行而非多取的探测行；绑定的源/排序不同或last row在该源值不符须拒绝。无需加密签名或抗攻击协议，不把base64当安全认证。
+每页从真实SQLite执行参数化WHERE seek条件+ORDER BY+LIMIT size+1，禁止OFFSET和读回全表在Python切片。seek用严格在last之后的词典序；此前列相等应含NULL与NULL，ASC/DESC不改变声明NULL位置规则；最后稳定row_id消除同业务键重复。最多取size+1条应用层记录，多出的仅判断has_more，next_cursor只有has_more时提供；空结果无next。可记录实际SQL与绑定参数，不能把客户端预先计算的期望请求当数据库执行证据。优化器物理扫描多少页不设指标，也不要求任何小样本索引加速比。
