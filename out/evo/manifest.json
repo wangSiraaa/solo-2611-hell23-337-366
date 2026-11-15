@@ -1,0 +1,99 @@
+{
+  "format": 1,
+  "shards": [
+    {
+      "shard_id": 0,
+      "file": "shards/shard-00000.arrow",
+      "canonical_revision": 2,
+      "fingerprint": "cc4c0071b8672887",
+      "rows": 4
+    },
+    {
+      "shard_id": 1,
+      "file": "shards/shard-00001.arrow",
+      "canonical_revision": 3,
+      "fingerprint": "3baec3c320fd1780",
+      "rows": 1
+    }
+  ],
+  "canonical_history": [
+    {
+      "canonical_revision": 2,
+      "fingerprint": "cc4c0071b8672887",
+      "code": {
+        "branch-record": 0,
+        "branch-missing": 1
+      },
+      "branches": [
+        {
+          "branch_id": "branch-record",
+          "name": "record",
+          "kind": "struct",
+          "fields": [
+            {
+              "field_id": "field-quantity",
+              "name": "qty",
+              "kind": "int64",
+              "nullable": false
+            }
+          ]
+        },
+        {
+          "branch_id": "branch-missing",
+          "name": "missing",
+          "kind": "null",
+          "fields": []
+        }
+      ]
+    },
+    {
+      "canonical_revision": 3,
+      "fingerprint": "3baec3c320fd1780",
+      "code": {
+        "branch-record": 0,
+        "branch-missing": 1
+      },
+      "branches": [
+        {
+          "branch_id": "branch-record",
+          "name": "record",
+          "kind": "struct",
+          "fields": [
+            {
+              "field_id": "field-quantity",
+              "name": "qty",
+              "kind": "int64",
+              "nullable": false
+            },
+            {
+              "field_id": "field-note",
+              "name": "note",
+              "kind": "text",
+              "nullable": true
+            }
+          ]
+        },
+        {
+          "branch_id": "branch-missing",
+          "name": "missing",
+          "kind": "null",
+          "fields": []
+        }
+      ]
+    }
+  ],
+  "producers": {
+    "P1": {
+      "last_seq": 2,
+      "last_revision": 2,
+      "rows": 4
+    },
+    "P2": {
+      "last_seq": 1,
+      "last_revision": 1,
+      "rows": 1
+    }
+  },
+  "total_rows": 5,
+  "closed": true
+}

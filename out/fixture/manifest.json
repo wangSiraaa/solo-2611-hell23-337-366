@@ -1,0 +1,50 @@
+{
+  "format": 1,
+  "shards": [
+    {
+      "shard_id": 0,
+      "file": "shards/shard-00000.arrow",
+      "canonical_revision": 2,
+      "fingerprint": "ee9bfcae1cdfd1cc",
+      "rows": 6
+    }
+  ],
+  "canonical_history": [
+    {
+      "canonical_revision": 2,
+      "fingerprint": "ee9bfcae1cdfd1cc",
+      "code": {
+        "branch-number": 0,
+        "branch-text": 1
+      },
+      "branches": [
+        {
+          "branch_id": "branch-number",
+          "name": "number",
+          "kind": "int64",
+          "fields": []
+        },
+        {
+          "branch_id": "branch-text",
+          "name": "text",
+          "kind": "text",
+          "fields": []
+        }
+      ]
+    }
+  ],
+  "producers": {
+    "P1": {
+      "last_seq": 1,
+      "last_revision": 1,
+      "rows": 3
+    },
+    "P2": {
+      "last_seq": 1,
+      "last_revision": 2,
+      "rows": 3
+    }
+  },
+  "total_rows": 6,
+  "closed": true
+}

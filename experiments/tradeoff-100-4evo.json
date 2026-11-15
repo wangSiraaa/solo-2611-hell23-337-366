@@ -1,0 +1,25 @@
+{
+  "params": {
+    "rows_per_batch": 100,
+    "evolutions": 4
+  },
+  "A_append_only_read_time_align": {
+    "rewrite_bytes": 0,
+    "shard_bytes": 36360,
+    "n_shards": 4,
+    "submit_seconds": 0.009159374982118607,
+    "query_seconds": 0.00196058297296986,
+    "query_rows": 400,
+    "peak_resident_bytes": 19094
+  },
+  "B_eager_rewrite_old_shards": {
+    "rewrite_bytes": 41630,
+    "rewrite_seconds": 0.0028930820408277214,
+    "shard_bytes": 36360,
+    "n_shards": 4,
+    "query_seconds": 0.0019042500061914325,
+    "query_rows": 400,
+    "peak_resident_bytes": 19094
+  },
+  "verdict": "A 的旧片重写字节为 0、提交耗时随演进稳定；B 的重写量随 K 次演进呈 O(K^2) 增长。A 的代价是新字段查询需读时对齐所有旧片（单次查询耗时见 query_seconds）。"
+}
