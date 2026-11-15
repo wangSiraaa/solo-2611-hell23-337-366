@@ -1,0 +1,129 @@
+$ python3 cli.py import /tmp/sess_dir --json inputs/graph.json
+{
+  "entities": 4,
+  "quarantined": [],
+  "segments": 5,
+  "version": 1
+}
+
+$ python3 cli.py query /tmp/sess_dir --lo 20 --hi 21
+{
+  "hi": 21,
+  "hits": [
+    "e",
+    "g",
+    "t1",
+    "t2"
+  ],
+  "lo": 20,
+  "version": 1
+}
+
+$ python3 cli.py apply-patch ... --patch inputs/patch.json --base 1
+{
+  "affected_entities": [
+    "e",
+    "t1"
+  ],
+  "changed_entities": [
+    "e",
+    "t1"
+  ],
+  "content_changed": [],
+  "edge_rows_written": 0,
+  "edges_read": 3,
+  "entities_read": 4,
+  "entity_rows_written": 3,
+  "index_rows_deleted": 3,
+  "index_rows_written": 0,
+  "new_version": 2,
+  "patch_id": "patch-0001",
+  "segments_read": 3,
+  "segments_rewritten": 0,
+  "status_changed": [
+    [
+      "e",
+      "trusted",
+      "quarantined"
+    ]
+  ]
+}
+
+$ python3 cli.py query /tmp/sess_dir --lo 20 --hi 21   # e no longer 'complete', stale t1 gone
+{
+  "hi": 21,
+  "hits": [
+    "g",
+    "t2"
+  ],
+  "lo": 20,
+  "version": 2
+}
+
+$ python3 cli.py apply-patch ... --patch inputs/patch-cycle.json --base 2  (stale? no, head=2)
+cycle patch applied -> head=3
+
+$ python3 cli.py apply-patch ... --patch inputs/patch-repair.json --base 2  (EXPIRED base)
+{"error": "stale_base", "message": "[stale_base] patch base 2 != current head 3"}
+
+$ python3 cli.py inspect /tmp/sess_dir --entity e
+{
+  "body": {
+    "id": "e",
+    "kind": "exon",
+    "parents": [
+      "t1",
+      "t2"
+    ],
+    "segments": [
+      [
+        20,
+        25
+      ],
+      [
+        40,
+        45
+      ]
+    ]
+  },
+  "content_version": 1,
+  "id": "e",
+  "parents": [
+    "t1",
+    "t2"
+  ],
+  "provenance": [
+    {
+      "hi": 25,
+      "lo": 20,
+      "ord": 0,
+      "source": "inputs/graph.json",
+      "version": 1
+    },
+    {
+      "hi": 45,
+      "lo": 40,
+      "ord": 1,
+      "source": "inputs/graph.json",
+      "version": 1
+    }
+  ],
+  "reasons": [
+    "bad_parent:t1",
+    "cycle"
+  ],
+  "segments": [
+    [
+      20,
+      25
+    ],
+    [
+      40,
+      45
+    ]
+  ],
+  "status": "quarantined",
+  "status_version": 3,
+  "version_from": 3,
+  "version_to": null
+}
