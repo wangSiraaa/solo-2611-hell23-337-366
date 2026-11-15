@@ -1,0 +1,22 @@
+{
+  "from": {
+    "precision": 8,
+    "scale": 4
+  },
+  "to": {
+    "precision": 6,
+    "scale": 2
+  },
+  "rounding": "half_even",
+  "overflow": "reject_shard",
+  "old_reader_scale": 4,
+  "target_reader_semantics": "convert each row then sum",
+  "shards": [
+    "a",
+    "b"
+  ],
+  "interruptions": [
+    "after_output_before_manifest",
+    "after_manifest_before_old_reader_release"
+  ]
+}
