@@ -1,0 +1,46 @@
+[
+  {
+    "id": "outer",
+    "left": "a",
+    "right": "b",
+    "join": "outer",
+    "op": "add",
+    "output_dims": [
+      "station",
+      "time"
+    ]
+  },
+  {
+    "id": "inner",
+    "left": "a",
+    "right": "b",
+    "join": "inner",
+    "op": "multiply",
+    "output_dims": [
+      "time",
+      "station"
+    ]
+  },
+  {
+    "id": "exact-reordered",
+    "left": "a",
+    "right": "same",
+    "join": "exact",
+    "op": "add",
+    "output_dims": [
+      "time",
+      "station"
+    ]
+  },
+  {
+    "id": "bad-exact",
+    "left": "a",
+    "right": "b",
+    "join": "exact",
+    "op": "add",
+    "output_dims": [
+      "time",
+      "station"
+    ]
+  }
+]

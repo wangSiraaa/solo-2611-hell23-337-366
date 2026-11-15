@@ -1,0 +1,12 @@
+{
+  "left": "L",
+  "right": "R",
+  "operation": "add",
+  "join": "exact",
+  "output_dims": [
+    "row",
+    "col"
+  ],
+  "resident_cell_budget": 160,
+  "output_chunk_cells": 32
+}

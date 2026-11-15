@@ -1,0 +1,16 @@
+{
+  "duplicate_station": [
+    "A",
+    "A"
+  ],
+  "bad_shape": [
+    [
+      1
+    ],
+    [
+      2,
+      3
+    ]
+  ],
+  "unknown_label": "Z"
+}

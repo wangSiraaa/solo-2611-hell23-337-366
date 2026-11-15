@@ -1,0 +1,266 @@
+{
+  "L": {
+    "dims": [
+      "row",
+      "col"
+    ],
+    "coords": {
+      "row": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ],
+      "col": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15"
+      ]
+    },
+    "shape": [
+      32,
+      16
+    ],
+    "chunks": [
+      "large-0.json",
+      "large-1.json",
+      "large-2.json",
+      "large-3.json",
+      "large-4.json",
+      "large-5.json",
+      "large-6.json",
+      "large-7.json"
+    ],
+    "chunk_layout": [
+      {
+        "path": "large-0.json",
+        "flat_start": 0,
+        "cell_count": 64,
+        "sha256": "df952591fd49b2ed1dcea64229f3ed68b26a3a4c7157a5909464abf6e54d9132",
+        "bytes": 377
+      },
+      {
+        "path": "large-1.json",
+        "flat_start": 64,
+        "cell_count": 64,
+        "sha256": "8201fe185905fc62c334744062893325ce2338a095ac20d37111b44706afd57b",
+        "bytes": 415
+      },
+      {
+        "path": "large-2.json",
+        "flat_start": 128,
+        "cell_count": 64,
+        "sha256": "5d965c4033739c32a6688d5c6a34968d2b8109fa5c025e8e884edf8828c3a7ff",
+        "bytes": 451
+      },
+      {
+        "path": "large-3.json",
+        "flat_start": 192,
+        "cell_count": 64,
+        "sha256": "0d0a3f21e83a6bba8c2e924e7804c22a125f85bfa0d4bf984a3024c7e47769b6",
+        "bytes": 451
+      },
+      {
+        "path": "large-4.json",
+        "flat_start": 256,
+        "cell_count": 64,
+        "sha256": "aa8e18b23624507c4f090629685520feb04dc2300f0c65a723314d1fc4c01932",
+        "bytes": 451
+      },
+      {
+        "path": "large-5.json",
+        "flat_start": 320,
+        "cell_count": 64,
+        "sha256": "0ab4174ad9770f3258d2cff3a2e75f9cffa646a8d2a23c5032fe1b3c72a6e284",
+        "bytes": 451
+      },
+      {
+        "path": "large-6.json",
+        "flat_start": 384,
+        "cell_count": 64,
+        "sha256": "845c892534c02afe3e5f9dbe9d6a53f0eac3c517ebbfd0199ab43479219f4403",
+        "bytes": 451
+      },
+      {
+        "path": "large-7.json",
+        "flat_start": 448,
+        "cell_count": 64,
+        "sha256": "6052e24dc4d32c6ba3ca28972c9a6c2744be3578e8245727641bfe73fb381622",
+        "bytes": 451
+      }
+    ]
+  },
+  "R": {
+    "dims": [
+      "col",
+      "row"
+    ],
+    "coords": {
+      "col": [
+        "15",
+        "14",
+        "13",
+        "12",
+        "11",
+        "10",
+        "9",
+        "8",
+        "7",
+        "6",
+        "5",
+        "4",
+        "3",
+        "2",
+        "1",
+        "0"
+      ],
+      "row": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "29",
+        "30",
+        "31"
+      ]
+    },
+    "shape": [
+      16,
+      32
+    ],
+    "chunks": [
+      "large-0.json",
+      "large-1.json",
+      "large-2.json",
+      "large-3.json",
+      "large-4.json",
+      "large-5.json",
+      "large-6.json",
+      "large-7.json"
+    ],
+    "chunk_layout": [
+      {
+        "path": "large-0.json",
+        "flat_start": 0,
+        "cell_count": 64,
+        "sha256": "df952591fd49b2ed1dcea64229f3ed68b26a3a4c7157a5909464abf6e54d9132",
+        "bytes": 377
+      },
+      {
+        "path": "large-1.json",
+        "flat_start": 64,
+        "cell_count": 64,
+        "sha256": "8201fe185905fc62c334744062893325ce2338a095ac20d37111b44706afd57b",
+        "bytes": 415
+      },
+      {
+        "path": "large-2.json",
+        "flat_start": 128,
+        "cell_count": 64,
+        "sha256": "5d965c4033739c32a6688d5c6a34968d2b8109fa5c025e8e884edf8828c3a7ff",
+        "bytes": 451
+      },
+      {
+        "path": "large-3.json",
+        "flat_start": 192,
+        "cell_count": 64,
+        "sha256": "0d0a3f21e83a6bba8c2e924e7804c22a125f85bfa0d4bf984a3024c7e47769b6",
+        "bytes": 451
+      },
+      {
+        "path": "large-4.json",
+        "flat_start": 256,
+        "cell_count": 64,
+        "sha256": "aa8e18b23624507c4f090629685520feb04dc2300f0c65a723314d1fc4c01932",
+        "bytes": 451
+      },
+      {
+        "path": "large-5.json",
+        "flat_start": 320,
+        "cell_count": 64,
+        "sha256": "0ab4174ad9770f3258d2cff3a2e75f9cffa646a8d2a23c5032fe1b3c72a6e284",
+        "bytes": 451
+      },
+      {
+        "path": "large-6.json",
+        "flat_start": 384,
+        "cell_count": 64,
+        "sha256": "845c892534c02afe3e5f9dbe9d6a53f0eac3c517ebbfd0199ab43479219f4403",
+        "bytes": 451
+      },
+      {
+        "path": "large-7.json",
+        "flat_start": 448,
+        "cell_count": 64,
+        "sha256": "6052e24dc4d32c6ba3ca28972c9a6c2744be3578e8245727641bfe73fb381622",
+        "bytes": 451
+      }
+    ]
+  }
+}

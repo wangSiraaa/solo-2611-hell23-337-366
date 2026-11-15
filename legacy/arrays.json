@@ -1,0 +1,93 @@
+{
+  "axis_catalogs": {
+    "time": [
+      "t1",
+      "t2"
+    ],
+    "station": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  },
+  "variables": {
+    "a": {
+      "dims": [
+        "time",
+        "station"
+      ],
+      "coords": {
+        "time": [
+          "t2",
+          "t1"
+        ],
+        "station": [
+          "B",
+          "D",
+          "A"
+        ]
+      },
+      "data": [
+        [
+          1,
+          8,
+          null
+        ],
+        [
+          0,
+          9,
+          4
+        ]
+      ]
+    },
+    "b": {
+      "dims": [
+        "station"
+      ],
+      "coords": {
+        "station": [
+          "C",
+          "A",
+          "B"
+        ]
+      },
+      "data": [
+        30,
+        10,
+        20
+      ]
+    },
+    "same": {
+      "dims": [
+        "station",
+        "time"
+      ],
+      "coords": {
+        "station": [
+          "A",
+          "D",
+          "B"
+        ],
+        "time": [
+          "t1",
+          "t2"
+        ]
+      },
+      "data": [
+        [
+          4,
+          null
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    }
+  }
+}

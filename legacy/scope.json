@@ -1,0 +1,11 @@
+{
+  "question_id": "313",
+  "scope_limits": [
+    "两个数值变量、至多3轴、每轴最多8标签",
+    "只支持add/multiply，无插值与通用表达式",
+    "允许NumPy/xarray，输出需独立读回来源"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}

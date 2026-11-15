@@ -1,0 +1,108 @@
+{
+  "A": {
+    "dims": [
+      "site",
+      "time"
+    ],
+    "coords": {
+      "site": [
+        "s1",
+        "s2"
+      ],
+      "time": [
+        "t1",
+        "t2"
+      ]
+    },
+    "shape": [
+      2,
+      2
+    ],
+    "chunks": [
+      "a0.json",
+      "a1.json"
+    ],
+    "chunk_layout": [
+      {
+        "path": "a0.json",
+        "flat_start": 0,
+        "cell_count": 2,
+        "sha256": "0d438cbcadb1a8347da84e626b2e19dc5680096121bc3df44a9c82c38a18b21e",
+        "bytes": 16
+      },
+      {
+        "path": "a1.json",
+        "flat_start": 2,
+        "cell_count": 2,
+        "sha256": "8b7b107a992d772e5e62dcab5b6c65740383bb5867ec971da05afb97d843b14f",
+        "bytes": 13
+      }
+    ]
+  },
+  "B": {
+    "dims": [
+      "time",
+      "site"
+    ],
+    "coords": {
+      "time": [
+        "t2",
+        "t1"
+      ],
+      "site": [
+        "s2",
+        "s1"
+      ]
+    },
+    "shape": [
+      2,
+      2
+    ],
+    "chunks": [
+      "b0.json",
+      "b1.json"
+    ],
+    "chunk_layout": [
+      {
+        "path": "b0.json",
+        "flat_start": 0,
+        "cell_count": 2,
+        "sha256": "6ca18536409e1867131b7e52d870f24ed491e6326c496a98da3d154f504b6892",
+        "bytes": 15
+      },
+      {
+        "path": "b1.json",
+        "flat_start": 2,
+        "cell_count": 2,
+        "sha256": "47cc077ff7c772bf021c7997defb04c76433050c5f23cf53faac42710d194927",
+        "bytes": 15
+      }
+    ]
+  },
+  "C": {
+    "dims": [
+      "site"
+    ],
+    "coords": {
+      "site": [
+        "s1",
+        "s2"
+      ]
+    },
+    "shape": [
+      2
+    ],
+    "chunks": [
+      "broadcast.json"
+    ],
+    "chunk_layout": [
+      {
+        "path": "broadcast.json",
+        "flat_start": 0,
+        "cell_count": 2,
+        "sha256": "6ca18536409e1867131b7e52d870f24ed491e6326c496a98da3d154f504b6892",
+        "bytes": 15
+      }
+    ]
+  }
+}

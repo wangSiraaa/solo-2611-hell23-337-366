@@ -1,0 +1,12 @@
+{
+  "left": "A",
+  "right": "C",
+  "operation": "add",
+  "join": "outer",
+  "output_dims": [
+    "site",
+    "time"
+  ],
+  "resident_cell_budget": 6,
+  "output_chunk_cells": 2
+}
