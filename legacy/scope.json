@@ -1,0 +1,11 @@
+{
+  "question_id": "320",
+  "scope_limits": [
+    "单个常规文件，最大16MiB，只读冻结源",
+    "Linux SEEK_DATA/SEEK_HOLE能力预检，允许其粗粒度报告",
+    "不压缩、不去重、不远端传输、不保证特定磁盘分配量"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}

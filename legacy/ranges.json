@@ -1,0 +1,32 @@
+[
+  {
+    "id": "head",
+    "start": 0,
+    "end": 32
+  },
+  {
+    "id": "hole",
+    "start": 65536,
+    "end": 65568
+  },
+  {
+    "id": "cross",
+    "start": 2097136,
+    "end": 2097168
+  },
+  {
+    "id": "zero-data",
+    "start": 4194304,
+    "end": 4194336
+  },
+  {
+    "id": "tail",
+    "start": 8388608,
+    "end": 8388625
+  },
+  {
+    "id": "empty",
+    "start": 100,
+    "end": 100
+  }
+]

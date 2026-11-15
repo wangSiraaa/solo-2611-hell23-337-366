@@ -1,0 +1,41 @@
+{
+  "base": "g1",
+  "target": "g2",
+  "new_size": 16384,
+  "ops": [
+    {
+      "kind": "hole",
+      "start": 0,
+      "end": 4096
+    },
+    {
+      "kind": "data",
+      "start": 8192,
+      "end": 12288
+    }
+  ],
+  "base_sha256": "3761dc1edccac3080312727544bee3e10f306a4f57406845026c24a408a4068d",
+  "target_sha256": "5537266a482083f67c9d9fbf1bd5f0a1977402624732f2fbf08c498d05549302",
+  "logical_blocks": [
+    {
+      "start": 0,
+      "end": 4096,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "start": 4096,
+      "end": 8192,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    },
+    {
+      "start": 8192,
+      "end": 12288,
+      "sha256": "1f3d85074515015fb658596558865ae77f45ba3d095ff4ccb1bbb764a99a62c8"
+    },
+    {
+      "start": 12288,
+      "end": 16384,
+      "sha256": "ad7facb2586fc6e966c004d7d1d16b024f5805ff7cb47c7a85dabd8b48892ca7"
+    }
+  ]
+}

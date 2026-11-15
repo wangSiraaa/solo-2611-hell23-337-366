@@ -1,0 +1,9 @@
+source_image.py生成真实稀疏镜像，delta.py按脏DATA区段复制，range_reader.py实际按范围读；源把旧数据打成洞后，镜像仍返回旧字节。请实现ingest-base、apply-delta、read-range、compact、verify，交付可跨代范围读取的稀疏归档，不能只给文件补写零而不建立代际和完整性协议。
+
+输入冻结普通文件最多64MiB，最多20代；每delta声明base_generation/target_generation、新逻辑长度、按操作顺序的DATA或HOLE半开区段和每4096字节校验块摘要。DATA给真实payload，显式全零DATA仍是data；HOLE在该代语义上覆盖旧内容为0，即使文件系统把洞粗报为data也不能保留旧值。delta可重叠，按声明顺序后写胜出；truncate缩短后再扩展的新增区间默认hole，不复活旧祖先字节。提供的区段是复制协议的权威变更日志，不声称能从mtime自动找全脏块；非法越界/摘要/祖先拒绝。
+
+归档保留最近两代可读及显式reader pin的更旧代。read-range只读请求相交的完整校验块并合成hole零，不得先恢复整个文件；checksum按逻辑块完整内容计算，跨DATA/HOLE/祖先边界须组装后再验，不能只验最新payload。请求空范围合法，越界拒绝，实际读取祖先payload和元数据、缓存、合成零分别计量。完整verify才可声明全代验真，局部读不能代替。
+
+需要选择覆盖区间索引、块级映射或分层差量，并说明后写覆盖、稀疏性、读放大与compaction的取舍。compaction必须实际产生可脱离被回收祖先的归档；正确性按所有合法range与完整恢复字节核对，不按st_blocks在不同文件系统必须相同。最终compact结果的payload不得包含协议上全洞的块；混合块可整块存储但需如实记data/hole映射。统计base、差量、索引、临时compact文件和总持久字节，不只报净新增。
+
+采用受控的单写者与最多两个读者：在新delta数据写完/索引未切换、compact生成后/旧祖先回收前暂停，旧reader继续读原代，新读者只见完整目标代。失败不发布半代，重复同target同内容幂等、同target异内容拒绝；释放pin后才可回收。验证真实data→hole、hole→全零data、跨块后写、缩小再扩展、错误祖先、payload破坏、跨代范围、compact中断与读者pin。独立按小bytearray逐操作应用作oracle并恢复文件逐字节比较，同时核对实际read范围与总存储。交付源码、设计与日志，不做压缩、内容去重、通用备份扫描或分布式块存储。
