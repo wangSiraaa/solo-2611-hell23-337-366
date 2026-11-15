@@ -1,0 +1,16 @@
+{
+  "columns": [
+    {
+      "name": "id",
+      "type": "int64",
+      "nullable": true
+    },
+    {
+      "name": "label",
+      "type": "text",
+      "nullable": true
+    }
+  ],
+  "equality": "NULL equals NULL for set comparison; text exact Unicode codepoints",
+  "witness_order": "left-to-right AST scan occurrence, then source row number; right consumes earliest available left occurrence"
+}

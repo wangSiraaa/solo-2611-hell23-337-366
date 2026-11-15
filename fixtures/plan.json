@@ -1,0 +1,18 @@
+{
+  "op": "except_all",
+  "left": {
+    "op": "scan",
+    "source": "a"
+  },
+  "right": {
+    "op": "intersect_all",
+    "left": {
+      "op": "scan",
+      "source": "a"
+    },
+    "right": {
+      "op": "scan",
+      "source": "b"
+    }
+  }
+}

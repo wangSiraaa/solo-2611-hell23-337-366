@@ -1,0 +1,39 @@
+{
+  "op": "union_all",
+  "left": {
+    "op": "except_all",
+    "left": {
+      "op": "union_all",
+      "left": {
+        "op": "except_all",
+        "left": {
+          "op": "union_all",
+          "left": {
+            "op": "scan",
+            "source": "a"
+          },
+          "right": {
+            "op": "scan",
+            "source": "b"
+          }
+        },
+        "right": {
+          "op": "scan",
+          "source": "b"
+        }
+      },
+      "right": {
+        "op": "scan",
+        "source": "b"
+      }
+    },
+    "right": {
+      "op": "scan",
+      "source": "b"
+    }
+  },
+  "right": {
+    "op": "scan",
+    "source": "b"
+  }
+}
