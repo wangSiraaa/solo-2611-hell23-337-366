@@ -1,0 +1,2 @@
+# No third-party dependencies: the archive reader uses only the Python 3.11
+# standard library (zlib for raw DEFLATE). Tests use unittest.
