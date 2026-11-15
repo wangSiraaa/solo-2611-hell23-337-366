@@ -1,0 +1,75 @@
+{
+  "plan_id": "example-P",
+  "source": [
+    {
+      "source_id": "s1",
+      "key": "A",
+      "delta": 5,
+      "new_key": "A2",
+      "parent_id": 1
+    },
+    {
+      "source_id": "s2",
+      "key": "C",
+      "delta": 7,
+      "parent_id": 1
+    }
+  ],
+  "matched": [
+    {
+      "when": {
+        "op": ">",
+        "args": [
+          {
+            "source": "delta"
+          },
+          {
+            "literal": 0
+          }
+        ]
+      },
+      "action": "update",
+      "set": {
+        "amount": {
+          "op": "+",
+          "args": [
+            {
+              "target": "amount"
+            },
+            {
+              "source": "delta"
+            }
+          ]
+        },
+        "business_key": {
+          "source": "new_key"
+        }
+      }
+    },
+    {
+      "when": {
+        "literal": true
+      },
+      "action": "delete"
+    }
+  ],
+  "not_matched": [
+    {
+      "when": {
+        "literal": true
+      },
+      "action": "insert",
+      "set": {
+        "business_key": {
+          "source": "key"
+        },
+        "amount": {
+          "source": "delta"
+        },
+        "parent_id": {
+          "source": "parent_id"
+        }
+      }
+    }
+  ]
+}

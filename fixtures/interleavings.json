@@ -1,0 +1,68 @@
+{
+  "lost_update": [
+    {
+      "plan": "P",
+      "source": [
+        {
+          "key": "A",
+          "delta": 5
+        }
+      ]
+    },
+    {
+      "external_update": {
+        "key": "A",
+        "amount": 100
+      }
+    },
+    {
+      "commit": "P"
+    }
+  ],
+  "absent_insert": [
+    {
+      "plan": "P",
+      "source": [
+        {
+          "key": "C",
+          "delta": 7
+        }
+      ]
+    },
+    {
+      "external_insert": {
+        "key": "C",
+        "amount": 9
+      }
+    },
+    {
+      "commit": "P"
+    }
+  ],
+  "disjoint": [
+    {
+      "plan": "P",
+      "source": [
+        {
+          "key": "A",
+          "delta": 1
+        }
+      ]
+    },
+    {
+      "plan": "Q",
+      "source": [
+        {
+          "key": "B",
+          "delta": 2
+        }
+      ]
+    },
+    {
+      "commit": "P"
+    },
+    {
+      "commit": "Q"
+    }
+  ]
+}
