@@ -1,0 +1,14 @@
+{
+  "range": [
+    "0",
+    "4"
+  ],
+  "budget_payload_bytes": 40,
+  "preferred": "high",
+  "max_parallel_reads": 2,
+  "switch_points": [
+    "0",
+    "2",
+    "4"
+  ]
+}

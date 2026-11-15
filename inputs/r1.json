@@ -1,0 +1,72 @@
+{
+  "revision": "r1",
+  "representations": [
+    {
+      "id": "low",
+      "scale": 10,
+      "pto": 5,
+      "init": "init.bin",
+      "segments": [
+        {
+          "t": 5,
+          "d": 20,
+          "url": "low-0.bin",
+          "bytes": 7
+        },
+        {
+          "t": 25,
+          "d": 20,
+          "url": "low-1.bin",
+          "bytes": 7
+        }
+      ]
+    },
+    {
+      "id": "high",
+      "scale": 10,
+      "pto": 5,
+      "init": "init.bin",
+      "segments": [
+        {
+          "t": 5,
+          "d": 20,
+          "url": "high-0.bin",
+          "bytes": 15
+        },
+        {
+          "t": 25,
+          "d": 20,
+          "url": "high-1.bin",
+          "bytes": 15
+        }
+      ]
+    }
+  ],
+  "objects": {
+    "low-1.bin": {
+      "revision": "r1",
+      "bytes": 7,
+      "sha256": "807f67339a81252fccd1a00e17c886985476e3b210400bbce5d7ddee21e7a342"
+    },
+    "low-0.bin": {
+      "revision": "r1",
+      "bytes": 7,
+      "sha256": "41de698670680e96b5d44e8ca9117d6dd6e8e508cdebf62c427b419ffa1e1236"
+    },
+    "init.bin": {
+      "revision": "r1",
+      "bytes": 8,
+      "sha256": "fad73b8ccd644dcd02fde3fa28fbda33d5cd3b72d83e8bb4d9cb2e2dc8c5bf8d"
+    },
+    "high-1.bin": {
+      "revision": "r1",
+      "bytes": 15,
+      "sha256": "fbd3773356f6546bfa280a6283d691a9850614cf857f2d6fc4d052759e9483b4"
+    },
+    "high-0.bin": {
+      "revision": "r1",
+      "bytes": 15,
+      "sha256": "f687c0e70707ac497e8316edbf2092ed43e43726fbcd0c370ca4ed62a8c096fd"
+    }
+  }
+}

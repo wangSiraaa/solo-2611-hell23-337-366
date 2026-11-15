@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" type="static"><BaseURL>media/</BaseURL>
+<Period id="p1" start="PT2S" duration="PT4.95S"><BaseURL>first/</BaseURL><AdaptationSet>
+<SegmentTemplate timescale="10" presentationTimeOffset="5" startNumber="7" media="$RepresentationID$/seg-$Number%03d$-$Time$.m4s" initialization="$RepresentationID$/init.mp4"><SegmentTimeline><S t="0" d="10" r="1"/><S t="20" d="5" r="-1"/></SegmentTimeline></SegmentTemplate>
+<Representation id="low"/><Representation id="high"><BaseURL>hi/</BaseURL><SegmentTemplate startNumber="11" media="chunk-$Time$-$$.m4s"/></Representation>
+</AdaptationSet></Period>
+<Period id="p2" start="PT7S" duration="PT2S"><AdaptationSet><Representation id="audio"><SegmentTemplate timescale="1000" presentationTimeOffset="0" startNumber="1" media="$Number$.m4s" initialization="init.mp4"><SegmentTimeline><S t="0" d="500" r="-1"/></SegmentTimeline></SegmentTemplate></Representation></AdaptationSet></Period></MPD>
