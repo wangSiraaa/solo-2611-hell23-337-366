@@ -1,0 +1,11 @@
+{
+  "question_id": "318",
+  "scope_limits": [
+    "GRIB2 regular_ll小矩形网格，instant和accum",
+    "每格最多20x20、最多20消息，允许ecCodes",
+    "不插值、天气预测、统计反演或全GRIB协议实现"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}
