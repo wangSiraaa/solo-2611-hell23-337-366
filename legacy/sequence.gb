@@ -1,0 +1,28 @@
+LOCUS       DEMO0001                  30 bp    DNA     circular SYN 15-NOV-2026
+DEFINITION  Synthetic location-expression input.
+ACCESSION   DEMO0001
+VERSION     DEMO0001.1
+KEYWORDS    .
+SOURCE      synthetic construct
+  ORGANISM  synthetic construct
+            other sequences; artificial sequences.
+FEATURES             Location/Qualifiers
+     source          1..30
+                     /organism="synthetic construct"
+     CDS             join(2..5,12..15)
+                     /note="forward join"
+     CDS             complement(join(2..5,12..15))
+                     /note="outer complement reverses child order"
+     misc_feature    join(complement(2..5),12..15)
+                     /note="mixed local orientation"
+     misc_feature    join(27..30,1..3)
+                     /note="explicit circular wrap"
+     misc_feature    8
+                     /note="single base"
+     CDS             <2..5
+                     /note="fuzzy endpoint not accepted"
+     misc_feature    8^9
+                     /note="between-base not accepted"
+ORIGIN
+        1 acgtacgttt aaccggnnac gtacgtagct
+//

@@ -1,0 +1,7 @@
+{
+  "feature_types": [
+    "CDS",
+    "misc_feature"
+  ],
+  "alphabet": "ACGTN"
+}

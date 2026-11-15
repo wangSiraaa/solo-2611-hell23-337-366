@@ -1,0 +1,41 @@
+{
+  "source": "AACCGGTT",
+  "feature_segment": [
+    2,
+    6
+  ],
+  "left": "exclude",
+  "right": "exclude",
+  "cases": [
+    {
+      "id": "partial_left",
+      "edit": {
+        "start": 0,
+        "end": 4,
+        "insert": "TT"
+      },
+      "expected_feature": "GG",
+      "included_insert": false
+    },
+    {
+      "id": "partial_right",
+      "edit": {
+        "start": 4,
+        "end": 8,
+        "insert": "TT"
+      },
+      "expected_feature": "CCTT",
+      "included_insert": true
+    },
+    {
+      "id": "full_replace_start_outside",
+      "edit": {
+        "start": 0,
+        "end": 8,
+        "insert": "TT"
+      },
+      "expected_feature": "",
+      "included_insert": false
+    }
+  ]
+}
