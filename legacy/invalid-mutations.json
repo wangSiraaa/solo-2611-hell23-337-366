@@ -1,0 +1,16 @@
+[
+  {
+    "path": "catalog/weather/items/center.json",
+    "op": "replace",
+    "pointer": "/collection",
+    "value": "other"
+  },
+  {
+    "path": "catalog/weather/collection.json",
+    "op": "append_link",
+    "value": {
+      "rel": "item",
+      "href": "missing.json"
+    }
+  }
+]

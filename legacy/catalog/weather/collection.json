@@ -1,0 +1,45 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Collection",
+  "id": "weather",
+  "description": "synthetic",
+  "license": "proprietary",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -10,
+          180,
+          10
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2026-01-01T00:00:00Z",
+          "2026-01-03T00:00:00Z"
+        ]
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "item",
+      "href": "items/date-line.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/center.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/later.json"
+    },
+    {
+      "rel": "item",
+      "href": "items/../items/date-line.json"
+    }
+  ]
+}

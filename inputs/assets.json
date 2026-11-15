@@ -1,0 +1,10 @@
+{
+  "dateline": {
+    "size": 12,
+    "sha256": "7c3852d8bd316d1a2912532a06f611768fbb2d5fb06316958bf9c7f26ba62234",
+    "replicas": [
+      "replicas/stale.bin",
+      "replicas/current.bin"
+    ]
+  }
+}

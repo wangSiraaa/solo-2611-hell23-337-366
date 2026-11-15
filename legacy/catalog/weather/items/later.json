@@ -1,0 +1,57 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Feature",
+  "id": "later",
+  "collection": "weather",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          179,
+          2
+        ],
+        [
+          180,
+          2
+        ],
+        [
+          180,
+          3
+        ],
+        [
+          179,
+          3
+        ],
+        [
+          179,
+          2
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    179,
+    2,
+    180,
+    3
+  ],
+  "properties": {
+    "datetime": "2026-01-03T00:00:00Z"
+  },
+  "links": [
+    {
+      "rel": "collection",
+      "href": "../collection.json"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "../../assets/later.bin",
+      "type": "application/octet-stream",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

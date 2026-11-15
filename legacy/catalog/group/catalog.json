@@ -1,0 +1,16 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Catalog",
+  "id": "group",
+  "description": "synthetic",
+  "links": [
+    {
+      "rel": "child",
+      "href": "../weather/collection.json"
+    },
+    {
+      "rel": "parent",
+      "href": "../catalog.json"
+    }
+  ]
+}

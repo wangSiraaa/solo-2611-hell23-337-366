@@ -1,0 +1,11 @@
+{
+  "question_id": "314",
+  "scope_limits": [
+    "STAC 1.0本地Catalog/Collection/Item受限结构",
+    "最多32Item；几何仅轴对齐Polygon/MultiPolygon矩形",
+    "只索引资产元数据，不读取影像数值，不做地理投影"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}

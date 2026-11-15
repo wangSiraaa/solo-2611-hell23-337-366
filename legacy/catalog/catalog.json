@@ -1,0 +1,12 @@
+{
+  "stac_version": "1.0.0",
+  "type": "Catalog",
+  "id": "root",
+  "description": "synthetic",
+  "links": [
+    {
+      "rel": "child",
+      "href": "group/catalog.json"
+    }
+  ]
+}
