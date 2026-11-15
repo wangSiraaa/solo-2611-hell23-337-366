@@ -1,0 +1,2 @@
+[seq= 0] import legacy/areas.osm rebuilt=[500, 501] quarantined=[501]
+[seq= 0] explain(500) directions={101: 1, 102: -1, 105: 1, 103: 1, 104: -1} verifiable=True

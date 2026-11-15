@@ -1,0 +1,383 @@
+{
+ "main": {
+  "steps": [
+   {
+    "label": "seq0-import",
+    "sequence": 0,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1005,
+     1006,
+     1007,
+     1008,
+     1009,
+     1010
+    ],
+    "quarantine": [
+     1004
+    ],
+    "rebuilt": [
+     1001,
+     1002,
+     1003,
+     1004,
+     1005,
+     1006,
+     1007,
+     1008,
+     1009,
+     1010
+    ],
+    "removed": []
+   },
+   {
+    "label": "d01_move_shared_node",
+    "sequence": 1,
+    "valid": [
+     1002,
+     1003,
+     1005,
+     1006,
+     1007,
+     1008,
+     1009,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004
+    ],
+    "rebuilt": [
+     1001,
+     1002
+    ],
+    "removed": []
+   },
+   {
+    "label": "d02_delete_shared_way",
+    "sequence": 2,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1009,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [
+     1005,
+     1006
+    ],
+    "removed": []
+   },
+   {
+    "label": "d03_break_1010",
+    "sequence": 3,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1009
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006,
+     1010
+    ],
+    "rebuilt": [
+     1010
+    ],
+    "removed": []
+   },
+   {
+    "label": "d04_repair_1010",
+    "sequence": 4,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1009,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [
+     1010
+    ],
+    "removed": []
+   },
+   {
+    "label": "d05_delete_relation",
+    "sequence": 5,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [],
+    "removed": [
+     1009
+    ]
+   },
+   {
+    "label": "d06_edit_orphan_way",
+    "sequence": 6,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [],
+    "removed": []
+   },
+   {
+    "label": "d07_transfer_members",
+    "sequence": 7,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [
+     1008
+    ],
+    "removed": []
+   },
+   {
+    "label": "d08_edit_old_way",
+    "sequence": 8,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [],
+    "removed": []
+   },
+   {
+    "label": "d09_edit_new_way",
+    "sequence": 9,
+    "valid": [
+     1002,
+     1003,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1001,
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [
+     1008
+    ],
+    "removed": []
+   },
+   {
+    "label": "d10_repair_shared_node",
+    "sequence": 10,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1004,
+     1005,
+     1006
+    ],
+    "rebuilt": [
+     1001,
+     1002
+    ],
+    "removed": []
+   },
+   {
+    "label": "d11_undelete_way",
+    "sequence": 11,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1005,
+     1006,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1004
+    ],
+    "rebuilt": [
+     1005,
+     1006
+    ],
+    "removed": []
+   },
+   {
+    "label": "d12_noop_object",
+    "sequence": 12,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1005,
+     1006,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [
+     1004
+    ],
+    "rebuilt": [],
+    "removed": []
+   },
+   {
+    "label": "d13_close_gap",
+    "sequence": 13,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1004,
+     1005,
+     1006,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [],
+    "rebuilt": [
+     1004
+    ],
+    "removed": []
+   },
+   {
+    "label": "d14_move_node5_retry",
+    "sequence": 14,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1004,
+     1005,
+     1006,
+     1007,
+     1008,
+     1010
+    ],
+    "quarantine": [],
+    "rebuilt": [
+     1002
+    ],
+    "removed": []
+   },
+   {
+    "label": "d15_create_relation",
+    "sequence": 15,
+    "valid": [
+     1001,
+     1002,
+     1003,
+     1004,
+     1005,
+     1006,
+     1007,
+     1008,
+     1010,
+     1011
+    ],
+    "quarantine": [],
+    "rebuilt": [
+     1011
+    ],
+    "removed": []
+   }
+  ]
+ },
+ "legacy": {
+  "steps": [
+   {
+    "label": "legacy-import",
+    "valid": [
+     500
+    ],
+    "quarantine": [
+     501
+    ]
+   }
+  ]
+ },
+ "inputs": {
+  "steps": [
+   {
+    "label": "inputs-delete-way",
+    "quarantine": [
+     21
+    ]
+   },
+   {
+    "label": "shared-node-move",
+    "validity": {
+     "21": false,
+     "22": true
+    }
+   }
+  ]
+ },
+ "checks_passed": 821
+}

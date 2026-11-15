@@ -1,0 +1,375 @@
+{
+ "cache": {
+  "500": {
+   "bbox": [
+    0.0,
+    0.0,
+    12.0,
+    4.0
+   ],
+   "built_at": 0,
+   "relation_version": 1,
+   "rings": [
+    {
+     "node_versions": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "nodes": [
+      1,
+      2,
+      3,
+      4,
+      1
+     ],
+     "parts": [
+      {
+       "direction": 1,
+       "nodes": [
+        1,
+        2,
+        3
+       ],
+       "way_id": 101,
+       "way_version": 1
+      },
+      {
+       "direction": -1,
+       "nodes": [
+        3,
+        4,
+        1
+       ],
+       "way_id": 102,
+       "way_version": 1
+      }
+     ],
+     "role": "outer"
+    },
+    {
+     "node_versions": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "nodes": [
+      11,
+      12,
+      13,
+      14,
+      11
+     ],
+     "parts": [
+      {
+       "direction": 1,
+       "nodes": [
+        11,
+        12,
+        13,
+        14,
+        11
+       ],
+       "way_id": 105,
+       "way_version": 1
+      }
+     ],
+     "role": "outer"
+    },
+    {
+     "node_versions": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "nodes": [
+      5,
+      6,
+      7,
+      8,
+      5
+     ],
+     "parts": [
+      {
+       "direction": 1,
+       "nodes": [
+        5,
+        6,
+        7
+       ],
+       "way_id": 103,
+       "way_version": 1
+      },
+      {
+       "direction": -1,
+       "nodes": [
+        7,
+        8,
+        5
+       ],
+       "way_id": 104,
+       "way_version": 1
+      }
+     ],
+     "role": "inner"
+    }
+   ],
+   "wkt": "MULTIPOLYGON (((10 2, 12 2, 12 0, 10 0, 10 2)), ((0 4, 4 4, 4 0, 0 0, 0 4), (2 1, 2 2, 1 2, 1 1, 2 1)))"
+  }
+ },
+ "graph": {
+  "nodes": [
+   {
+    "deleted": false,
+    "id": 1,
+    "lat": 0.0,
+    "lon": 0.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 2,
+    "lat": 0.0,
+    "lon": 4.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 3,
+    "lat": 4.0,
+    "lon": 4.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 4,
+    "lat": 4.0,
+    "lon": 0.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 5,
+    "lat": 1.0,
+    "lon": 1.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 6,
+    "lat": 1.0,
+    "lon": 2.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 7,
+    "lat": 2.0,
+    "lon": 2.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 8,
+    "lat": 2.0,
+    "lon": 1.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 11,
+    "lat": 0.0,
+    "lon": 10.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 12,
+    "lat": 0.0,
+    "lon": 12.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 13,
+    "lat": 2.0,
+    "lon": 12.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 14,
+    "lat": 2.0,
+    "lon": 10.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 21,
+    "lat": 0.0,
+    "lon": 20.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 22,
+    "lat": 0.0,
+    "lon": 21.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 23,
+    "lat": 1.0,
+    "lon": 21.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 24,
+    "lat": 1.0,
+    "lon": 20.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 25,
+    "lat": 0.0,
+    "lon": 20.0,
+    "version": 1
+   }
+  ],
+  "relations": [
+   {
+    "deleted": false,
+    "id": 500,
+    "members": [
+     [
+      104,
+      "inner"
+     ],
+     [
+      105,
+      "outer"
+     ],
+     [
+      102,
+      "outer"
+     ],
+     [
+      103,
+      "inner"
+     ],
+     [
+      101,
+      "outer"
+     ]
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 501,
+    "members": [
+     [
+      201,
+      "outer"
+     ],
+     [
+      202,
+      "outer"
+     ]
+    ],
+    "version": 1
+   }
+  ],
+  "ways": [
+   {
+    "deleted": false,
+    "id": 101,
+    "nodes": [
+     1,
+     2,
+     3
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 102,
+    "nodes": [
+     1,
+     4,
+     3
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 103,
+    "nodes": [
+     5,
+     6,
+     7
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 104,
+    "nodes": [
+     5,
+     8,
+     7
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 105,
+    "nodes": [
+     11,
+     12,
+     13,
+     14,
+     11
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 201,
+    "nodes": [
+     21,
+     22,
+     23
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 202,
+    "nodes": [
+     23,
+     24,
+     25
+    ],
+    "version": 1
+   }
+  ]
+ },
+ "quarantine": {
+  "501": {
+   "detail": "chain starting at way 202 does not close",
+   "reason": "open-ring",
+   "since": 0
+  }
+ },
+ "sequence": 0
+}

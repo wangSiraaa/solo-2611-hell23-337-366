@@ -1,0 +1,12 @@
+{
+ "sequence": 5,
+ "base": 4,
+ "relations": [
+  {
+   "id": 1009,
+   "old_version": 1,
+   "new_version": 2,
+   "delete": true
+  }
+ ]
+}

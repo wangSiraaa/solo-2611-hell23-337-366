@@ -1,0 +1,1 @@
+[seq= 1] shared-node-move rebuilt=[21, 22] validity={'21': False, '22': True} expected={'21': False, '22': True}

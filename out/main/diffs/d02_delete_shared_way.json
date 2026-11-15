@@ -1,0 +1,12 @@
+{
+ "sequence": 2,
+ "base": 1,
+ "ways": [
+  {
+   "id": 109,
+   "old_version": 1,
+   "new_version": 2,
+   "delete": true
+  }
+ ]
+}

@@ -1,0 +1,2 @@
+{"op": "import", "quarantined": [], "rebuilt": [21, 22], "sequence": 0, "source": "/workspace/inputs/shared.osm"}
+{"changed": {"nodes": [2], "relations": [], "ways": []}, "diff": {"base": 0, "nodes": [{"id": 2, "lat": 3.0, "lon": 2.0, "new_version": 2, "old_version": 1}], "relations": [], "sequence": 1, "ways": []}, "op": "diff", "quarantined": [21], "rebuilt": [21, 22], "recovered": [], "removed": [], "sequence": 1}

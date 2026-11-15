@@ -1,0 +1,17 @@
+{
+ "sequence": 9,
+ "base": 8,
+ "ways": [
+  {
+   "id": 113,
+   "old_version": 1,
+   "new_version": 2,
+   "nodes": [
+    36,
+    37,
+    38,
+    36
+   ]
+  }
+ ]
+}

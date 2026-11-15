@@ -1,0 +1,148 @@
+{
+ "cache": {
+  "22": {
+   "bbox": [
+    2.0,
+    0.0,
+    4.0,
+    3.0
+   ],
+   "built_at": 1,
+   "relation_version": 1,
+   "rings": [
+    {
+     "node_versions": [
+      2,
+      1,
+      1,
+      2
+     ],
+     "nodes": [
+      2,
+      5,
+      6,
+      2
+     ],
+     "parts": [
+      {
+       "direction": 1,
+       "nodes": [
+        2,
+        5,
+        6,
+        2
+       ],
+       "way_id": 12,
+       "way_version": 1
+      }
+     ],
+     "role": "outer"
+    }
+   ],
+   "wkt": "POLYGON ((2 3, 4 0, 3 2, 2 3))"
+  }
+ },
+ "graph": {
+  "nodes": [
+   {
+    "deleted": false,
+    "id": 1,
+    "lat": 0.0,
+    "lon": 0.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 2,
+    "lat": 3.0,
+    "lon": 2.0,
+    "version": 2
+   },
+   {
+    "deleted": false,
+    "id": 3,
+    "lat": 2.0,
+    "lon": 2.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 4,
+    "lat": 2.0,
+    "lon": 0.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 5,
+    "lat": 0.0,
+    "lon": 4.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 6,
+    "lat": 2.0,
+    "lon": 3.0,
+    "version": 1
+   }
+  ],
+  "relations": [
+   {
+    "deleted": false,
+    "id": 21,
+    "members": [
+     [
+      11,
+      "outer"
+     ]
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 22,
+    "members": [
+     [
+      12,
+      "outer"
+     ]
+    ],
+    "version": 1
+   }
+  ],
+  "ways": [
+   {
+    "deleted": false,
+    "id": 11,
+    "nodes": [
+     1,
+     2,
+     3,
+     4,
+     1
+    ],
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 12,
+    "nodes": [
+     2,
+     5,
+     6,
+     2
+    ],
+    "version": 1
+   }
+  ]
+ },
+ "quarantine": {
+  "21": {
+   "detail": "Self-intersection[1.33333333333333 2]",
+   "reason": "outer-ring-invalid",
+   "since": 1
+  }
+ },
+ "sequence": 1
+}

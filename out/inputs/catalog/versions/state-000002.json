@@ -1,0 +1,64 @@
+{
+ "cache": {},
+ "graph": {
+  "nodes": [
+   {
+    "deleted": false,
+    "id": 1,
+    "lat": 0.0,
+    "lon": 0.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 2,
+    "lat": 0.0,
+    "lon": 5.0,
+    "version": 2
+   },
+   {
+    "deleted": false,
+    "id": 3,
+    "lat": 2.0,
+    "lon": 5.0,
+    "version": 2
+   },
+   {
+    "deleted": false,
+    "id": 4,
+    "lat": 2.0,
+    "lon": 0.0,
+    "version": 1
+   }
+  ],
+  "relations": [
+   {
+    "deleted": false,
+    "id": 21,
+    "members": [
+     [
+      11,
+      "outer"
+     ]
+    ],
+    "version": 1
+   }
+  ],
+  "ways": [
+   {
+    "deleted": true,
+    "id": 11,
+    "nodes": [],
+    "version": 2
+   }
+  ]
+ },
+ "quarantine": {
+  "21": {
+   "detail": "way 11 referenced by relation 21",
+   "reason": "way-missing",
+   "since": 2
+  }
+ },
+ "sequence": 2
+}

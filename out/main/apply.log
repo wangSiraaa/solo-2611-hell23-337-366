@@ -1,0 +1,28 @@
+== main saga: shared nodes/ways, quarantine, recovery, dependency transfer ==
+[seq= 0] import rebuilt=[1001, 1002, 1003, 1004, 1005, 1006, 1007, 1008, 1009, 1010] quarantined=[1004] index=9
+[seq= 1] d01_move_shared_node changed={'nodes': [2], 'ways': [], 'relations': []} rebuilt=[1001, 1002] quarantined+=[1001] recovered=[] removed=[] index=8
+[seq= 2] d02_delete_shared_way changed={'nodes': [], 'ways': [109], 'relations': []} rebuilt=[1005, 1006] quarantined+=[1005, 1006] recovered=[] removed=[] index=6
+[seq= 3] d03_break_1010 changed={'nodes': [44], 'ways': [], 'relations': []} rebuilt=[1010] quarantined+=[1010] recovered=[] removed=[] index=5
+[seq= 4] d04_repair_1010 changed={'nodes': [44], 'ways': [], 'relations': []} rebuilt=[1010] quarantined+=[] recovered=[1010] removed=[] index=6
+[seq= 5] d05_delete_relation changed={'nodes': [], 'ways': [], 'relations': [1009]} rebuilt=[] quarantined+=[] recovered=[] removed=[1009] index=5
+[seq= 6] d06_edit_orphan_way changed={'nodes': [], 'ways': [114], 'relations': []} rebuilt=[] quarantined+=[] recovered=[] removed=[] index=5
+[seq= 7] d07_transfer_members changed={'nodes': [], 'ways': [], 'relations': [1008]} rebuilt=[1008] quarantined+=[] recovered=[] removed=[] index=5
+[seq= 8] d08_edit_old_way changed={'nodes': [], 'ways': [112], 'relations': []} rebuilt=[] quarantined+=[] recovered=[] removed=[] index=5
+[seq= 9] d09_edit_new_way changed={'nodes': [], 'ways': [113], 'relations': []} rebuilt=[1008] quarantined+=[] recovered=[] removed=[] index=5
+[seq=10] d10_repair_shared_node changed={'nodes': [2], 'ways': [], 'relations': []} rebuilt=[1001, 1002] quarantined+=[] recovered=[1001] removed=[] index=6
+[seq=11] d11_undelete_way changed={'nodes': [], 'ways': [109], 'relations': []} rebuilt=[1005, 1006] quarantined+=[] recovered=[1005, 1006] removed=[] index=8
+[seq=12] d12_noop_object changed={'nodes': [], 'ways': [], 'relations': []} rebuilt=[] quarantined+=[] recovered=[] removed=[] index=8
+[seq=13] d13_close_gap changed={'nodes': [], 'ways': [108], 'relations': []} rebuilt=[1004] quarantined+=[] recovered=[1004] removed=[] index=9
+[seq=13] d14_move_node5 INDEX BUILD FAILED -> diff rolled back
+[seq=14] d14_move_node5_retry changed={'nodes': [5], 'ways': [], 'relations': []} rebuilt=[1002] quarantined+=[] recovered=[] removed=[] index=9
+[seq=15] d15_create_relation changed={'nodes': [48, 49, 50, 51], 'ways': [116], 'relations': [1011]} rebuilt=[1011] quarantined+=[] recovered=[] removed=[] index=10
+[seq=15] identical replay of d10 -> idempotent no-op
+[reject-ok] tampered replay (same versions, other content)
+[reject-ok] base version mismatch
+[reject-ok] version regression
+[reject-ok] same version, different content
+[reject-ok] way repeated inside one relation
+[reject-ok] bad role
+[reject-ok] out-of-order sequence
+[persist] reload + journal replay reproduce the committed state
+[oracle] every committed version matches an independent full rebuild

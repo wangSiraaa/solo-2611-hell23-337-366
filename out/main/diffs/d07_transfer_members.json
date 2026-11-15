@@ -1,0 +1,18 @@
+{
+ "sequence": 7,
+ "base": 6,
+ "relations": [
+  {
+   "id": 1008,
+   "old_version": 1,
+   "new_version": 2,
+   "members": [
+    {
+     "type": "way",
+     "ref": 113,
+     "role": "outer"
+    }
+   ]
+  }
+ ]
+}

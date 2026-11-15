@@ -1,0 +1,13 @@
+{
+ "sequence": 4,
+ "base": 3,
+ "nodes": [
+  {
+   "id": 44,
+   "old_version": 2,
+   "new_version": 3,
+   "lon": 60,
+   "lat": 0
+  }
+ ]
+}

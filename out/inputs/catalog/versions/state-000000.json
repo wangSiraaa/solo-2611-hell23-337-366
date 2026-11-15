@@ -1,0 +1,109 @@
+{
+ "cache": {
+  "21": {
+   "bbox": [
+    0.0,
+    0.0,
+    2.0,
+    2.0
+   ],
+   "built_at": 0,
+   "relation_version": 1,
+   "rings": [
+    {
+     "node_versions": [
+      1,
+      1,
+      1,
+      1,
+      1
+     ],
+     "nodes": [
+      1,
+      2,
+      3,
+      4,
+      1
+     ],
+     "parts": [
+      {
+       "direction": 1,
+       "nodes": [
+        1,
+        2,
+        3,
+        4,
+        1
+       ],
+       "way_id": 11,
+       "way_version": 1
+      }
+     ],
+     "role": "outer"
+    }
+   ],
+   "wkt": "POLYGON ((0 0, 2 0, 2 2, 0 2, 0 0))"
+  }
+ },
+ "graph": {
+  "nodes": [
+   {
+    "deleted": false,
+    "id": 1,
+    "lat": 0.0,
+    "lon": 0.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 2,
+    "lat": 0.0,
+    "lon": 2.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 3,
+    "lat": 2.0,
+    "lon": 2.0,
+    "version": 1
+   },
+   {
+    "deleted": false,
+    "id": 4,
+    "lat": 2.0,
+    "lon": 0.0,
+    "version": 1
+   }
+  ],
+  "relations": [
+   {
+    "deleted": false,
+    "id": 21,
+    "members": [
+     [
+      11,
+      "outer"
+     ]
+    ],
+    "version": 1
+   }
+  ],
+  "ways": [
+   {
+    "deleted": false,
+    "id": 11,
+    "nodes": [
+     1,
+     2,
+     3,
+     4,
+     1
+    ],
+    "version": 1
+   }
+  ]
+ },
+ "quarantine": {},
+ "sequence": 0
+}
