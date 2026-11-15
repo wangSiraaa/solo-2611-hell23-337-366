@@ -1,0 +1,47 @@
+[
+  {
+    "id": "before",
+    "scale": "UTC",
+    "value": "2016-12-31T23:59:59Z"
+  },
+  {
+    "id": "leap",
+    "scale": "UTC",
+    "value": "2016-12-31T23:59:60Z"
+  },
+  {
+    "id": "after",
+    "scale": "UTC",
+    "value": "2017-01-01T00:00:00Z"
+  },
+  {
+    "id": "tai-leap",
+    "scale": "TAI",
+    "value": "2017-01-01T00:00:36"
+  },
+  {
+    "id": "gps-leap",
+    "scale": "GPS",
+    "value": "1167264017"
+  },
+  {
+    "id": "nano",
+    "scale": "UTC",
+    "value": "2016-12-31T23:59:60.000000001Z"
+  },
+  {
+    "id": "bad-leap",
+    "scale": "UTC",
+    "value": "2016-12-30T23:59:60Z"
+  },
+  {
+    "id": "too-precise",
+    "scale": "GPS",
+    "value": "1167264017.0000000001"
+  },
+  {
+    "id": "future",
+    "scale": "UTC",
+    "value": "2020-01-01T00:00:00Z"
+  }
+]

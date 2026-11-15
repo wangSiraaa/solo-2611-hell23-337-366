@@ -1,0 +1,22 @@
+[
+  {
+    "id": "cross-leap",
+    "start": "before",
+    "end": "after"
+  },
+  {
+    "id": "same",
+    "start": "leap",
+    "end": "gps-leap"
+  },
+  {
+    "id": "one-ns",
+    "start": "leap",
+    "end": "nano"
+  },
+  {
+    "id": "bad",
+    "start": "bad-leap",
+    "end": "after"
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "valid_from": "2015-01-01T00:00:00Z",
+  "valid_until": "2018-01-01T00:00:00Z",
+  "entries": [
+    {
+      "effective_utc": "2015-01-01T00:00:00Z",
+      "tai_minus_utc": 35
+    },
+    {
+      "effective_utc": "2015-07-01T00:00:00Z",
+      "tai_minus_utc": 36
+    },
+    {
+      "effective_utc": "2017-01-01T00:00:00Z",
+      "tai_minus_utc": 37
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "u",
+    "source": "A",
+    "key": "k",
+    "scale": "UTC",
+    "value": "2017-01-01T00:00:00Z"
+  },
+  {
+    "id": "t",
+    "source": "B",
+    "key": "k",
+    "scale": "TAI",
+    "value": "2017-01-01T00:00:37"
+  }
+]

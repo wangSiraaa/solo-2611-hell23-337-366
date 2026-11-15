@@ -1,0 +1,11 @@
+{
+  "question_id": "316",
+  "scope_limits": [
+    "仅正闰秒，固定已声明有效日期范围",
+    "UTC/TAI文本及GPS秒数，最多9位小数",
+    "不查询在线时间、不推测时钟偏差、不支持闰秒表范围外"
+  ],
+  "input_policy": "Given synthetic fixtures and any variants within the prompt-defined subset; invalid variants test only the declared rejection behavior.",
+  "quantifier": "all inputs within the declared subset",
+  "non_goals": "Anything outside the explicit subset is not an acceptance requirement."
+}
