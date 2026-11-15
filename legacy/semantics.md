@@ -1,0 +1,4 @@
+GFF3 9列，UTF8。坐标1基闭区间转0基半开[start-1,end)，sequence-region声明唯一序列长度且必须覆盖所有坐标。strand只支持+/-/.；CDS phase为0/1/2，其他type为.。每个物理行生成独立segment并保留原行、score/source/phase/attributes；无ID行生成文件摘要+行号的匿名feature，不允许其他行Parent引用匿名身份。
+属性先按分号分key=value，再按Parent字段的未转义逗号切分，再百分号解码，不能先unquote整串；其他属性值中的编码逗号是文本。ID/Parent只允许一次，Parent列表去重；Name/Note等未知属性保留原解码值，不解释生物含义。ID可在多行重复代表分段feature，只有seqid/type/strand/Parent集合完全一致时合为同实体；start/end/phase不同允许。重复ID身份不一致时所有该ID行进入quarantine，不任选一行。
+前向Parent可解析，多父实体只存一份segments而有多条edges，不复制计算坐标或强制合成一个区间。Parent指向不存在或已隔离feature、引用环中的feature均不可进入可用关系表；隔离沿依赖向子feature传播，直到所有已接收feature的全部父都已接收。不存在父不自动造gene，循环只隔离循环及依赖它们的子项，其他组件继续。输出entities/segments/parent_edges/quarantine，基础原行清单始终保留；不要求父几何范围包含子或符合生物层级，因为本题没有该约束。
+只支持注释部分，若出现##FASTA则之后不再解释feature并记录sequence_payload_ignored；不读取序列、不译码蛋白、不做剪接匹配。最多500行/100实体，允许直接图算法。

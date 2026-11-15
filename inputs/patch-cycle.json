@@ -1,0 +1,19 @@
+[
+  {
+    "op": "replace",
+    "id": "t1",
+    "entity": {
+      "id": "t1",
+      "kind": "mRNA",
+      "parents": [
+        "e"
+      ],
+      "segments": [
+        [
+          5,
+          90
+        ]
+      ]
+    }
+  }
+]

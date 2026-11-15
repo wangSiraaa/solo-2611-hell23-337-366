@@ -1,0 +1,13 @@
+##gff-version 3
+##sequence-region chr1 1 1000
+chr1	demo	exon	101	120	.	+	.	ID=ex%2Cshared;Parent=tx1,tx2;Note=a%3Bb%3Dc
+chr1	demo	CDS	101	109	.	+	0	ID=cds1;Parent=tx1
+chr1	demo	CDS	201	212	.	-	0	ID=cds1;Parent=tx1
+chr1	demo	mRNA	90	250	.	+	.	ID=tx1;Parent=g1
+chr1	demo	mRNA	90	300	.	+	.	ID=tx2;Parent=g1
+chr1	demo	gene	80	350	.	+	.	ID=g1
+chr1	demo	exon	401	410	.	+	.	ID=bad;Parent=missing
+chr1	demo	CDS	401	409	.	+	0	ID=badchild;Parent=bad
+chr1	demo	misc_feature	600	610	.	-	.	Name=no-id
+chr1	demo	mRNA	700	720	.	+	.	ID=cycle1;Parent=cycle2
+chr1	demo	mRNA	700	720	.	+	.	ID=cycle2;Parent=cycle1

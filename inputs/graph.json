@@ -1,0 +1,57 @@
+{
+  "g": {
+    "id": "g",
+    "kind": "gene",
+    "parents": [],
+    "segments": [
+      [
+        0,
+        100
+      ]
+    ]
+  },
+  "t1": {
+    "id": "t1",
+    "kind": "mRNA",
+    "parents": [
+      "g"
+    ],
+    "segments": [
+      [
+        5,
+        90
+      ]
+    ]
+  },
+  "t2": {
+    "id": "t2",
+    "kind": "mRNA",
+    "parents": [
+      "g"
+    ],
+    "segments": [
+      [
+        10,
+        95
+      ]
+    ]
+  },
+  "e": {
+    "id": "e",
+    "kind": "exon",
+    "parents": [
+      "t1",
+      "t2"
+    ],
+    "segments": [
+      [
+        20,
+        25
+      ],
+      [
+        40,
+        45
+      ]
+    ]
+  }
+}
