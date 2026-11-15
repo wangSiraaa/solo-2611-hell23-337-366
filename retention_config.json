@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "max_tables": 12,
+  "max_rows": 30000,
+  "roles": {
+    "account": "root",
+    "legal_hold": "retained",
+    "event": "ordinary",
+    "comment": "ordinary",
+    "pinned_event": "ordinary",
+    "subscription": "ordinary",
+    "tag": "ordinary",
+    "binder": "ordinary",
+    "node": "ordinary",
+    "alpha": "ordinary",
+    "beta": "ordinary",
+    "audit_log": "ordinary"
+  },
+  "root_predicate": {
+    "table": "account",
+    "column": "created_at",
+    "op": "<="
+  },
+  "retained_tables": {
+    "legal_hold": {
+      "protected_column": "event_id",
+      "expires_at_column": "expires_at",
+      "protected_parent_table": "event"
+    }
+  }
+}

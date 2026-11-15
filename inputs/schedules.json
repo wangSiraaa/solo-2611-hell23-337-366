@@ -1,14 +1,53 @@
 [
   {
     "name": "phantom_cascade",
-    "after_plan_sql": "INSERT INTO event VALUES(12,1,9)"
+    "point": "before_lock",
+    "sql": "INSERT INTO event VALUES (9001, 3, 999)",
+    "expect_apply": "STALE_PLAN",
+    "note": "plan 后新增指向候选根 a3 的 CASCADE 子行，必须 STALE 而非未审阅删除"
   },
   {
     "name": "hold_after_plan",
-    "after_plan_sql": "INSERT INTO legal_hold VALUES(11)"
+    "point": "before_lock",
+    "sql": "INSERT INTO legal_hold VALUES (9002, 30, NULL)",
+    "expect_apply": "STALE_PLAN",
+    "note": "plan 后新增永久 hold 保护将被级联的 event 30"
   },
   {
-    "name": "schema_after_plan",
-    "after_plan_sql": "CREATE INDEX event_account ON event(account_id)"
+    "name": "unrelated_index",
+    "point": "before_lock",
+    "sql": "CREATE INDEX event_account ON event(account_id)",
+    "expect_apply": "COMMITTED",
+    "note": "新增与闭包/谓词无关的目录元素（索引）不得使计划失效"
+  },
+  {
+    "name": "unrelated_row_change",
+    "point": "before_lock",
+    "sql": "UPDATE audit_log SET note='changed but irrelevant' WHERE id=1",
+    "expect_apply": "COMMITTED",
+    "note": "NULL FK 的无关行修改不得使计划失效"
+  },
+  {
+    "name": "in_lock_write_after_revalidation",
+    "point": "after_revalidation",
+    "sql": "INSERT INTO event VALUES (9003, 3, 999)",
+    "expect_apply": "COMMITTED",
+    "expect_rival": "blocked",
+    "note": "写锁持有期间 rival 写入应被 SQLITE_BUSY 挡住，计划照常提交"
+  },
+  {
+    "name": "in_lock_write_before_commit",
+    "point": "before_commit",
+    "sql": "INSERT INTO event VALUES (9004, 3, 999)",
+    "expect_apply": "COMMITTED",
+    "expect_rival": "blocked",
+    "note": "提交前最后控制点 rival 仍被锁挡住，无检查后写入窗口"
+  },
+  {
+    "name": "root_change_after_plan",
+    "point": "before_lock",
+    "sql": "UPDATE account SET created_at=250 WHERE id=3",
+    "expect_apply": "STALE_PLAN",
+    "note": "根数据变化（cutoff 谓词相关列）必须 STALE"
   }
 ]
