@@ -1,0 +1,14 @@
+[
+  {
+    "name": "phantom_cascade",
+    "after_plan_sql": "INSERT INTO event VALUES(12,1,9)"
+  },
+  {
+    "name": "hold_after_plan",
+    "after_plan_sql": "INSERT INTO legal_hold VALUES(11)"
+  },
+  {
+    "name": "schema_after_plan",
+    "after_plan_sql": "CREATE INDEX event_account ON event(account_id)"
+  }
+]

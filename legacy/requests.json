@@ -1,0 +1,51 @@
+[
+  {
+    "id": "success",
+    "roots": [
+      {
+        "table": "departments",
+        "pk": "d2"
+      }
+    ]
+  },
+  {
+    "id": "no_action_block",
+    "roots": [
+      {
+        "table": "departments",
+        "pk": "d1"
+      }
+    ]
+  },
+  {
+    "id": "remove_hold_together",
+    "roots": [
+      {
+        "table": "departments",
+        "pk": "d1"
+      },
+      {
+        "table": "holds",
+        "pk": "h1"
+      }
+    ]
+  },
+  {
+    "id": "nullability_block",
+    "roots": [
+      {
+        "table": "departments",
+        "pk": "d3"
+      }
+    ]
+  },
+  {
+    "id": "cascade_cycle",
+    "roots": [
+      {
+        "table": "nodes",
+        "pk": "n1"
+      }
+    ]
+  }
+]
