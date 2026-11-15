@@ -1,0 +1,41 @@
+$date synthetic fixture $end
+$version bounded VCD data archive $end
+$timescale 10 ns $end
+$scope module top $end
+$var wire 1 ! clk $end
+$var wire 4 # data [3:0] $end
+$var reg 1 % flag $end
+$scope module unit $end
+$var wire 4 # mirror [3:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0!
+b0001 #
+x%
+$end
+#5
+b1 #
+1!
+b10x #
+b11 #
+#8
+$dumpoff
+x!
+bx #
+x%
+$end
+#12
+$dumpon
+1!
+bz #
+0%
+$end
+#15
+b0 #
+x!
+#20
+b10 #
+0!

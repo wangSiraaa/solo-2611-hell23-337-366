@@ -1,0 +1,21 @@
+{
+  "seal": {
+    "last_tick": 20
+  },
+  "reads": [
+    {
+      "generation": 1,
+      "signal": "#",
+      "time": 5
+    },
+    {
+      "generation": 2,
+      "signal": "#",
+      "time": 20
+    }
+  ],
+  "control_points": [
+    "after_bytes_before_sql_commit",
+    "after_sql_commit_before_offset_ack"
+  ]
+}
