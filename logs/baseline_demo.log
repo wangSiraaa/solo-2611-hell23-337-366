@@ -1,0 +1,1 @@
+{"range_result": {"data": "41414141", "sha256": "63c1dd951ffedf6f7fd968ad4efa39b8ed584f162f46e715114ee184f8de9201", "read_bytes": 4}, "expected": "00000000", "actual_input_sizes": [["g1.img", 16384, 16384], ["g2.img", 16384, 16384]], "data_to_hole_failure_reproduced": true}

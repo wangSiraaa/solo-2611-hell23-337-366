@@ -1,0 +1,40 @@
+test_idempotent_same_target (test_archive.TestAncestorsAndIdempotency.test_idempotent_same_target) ... ok
+test_reclaimed_ancestor_rejected (test_archive.TestAncestorsAndIdempotency.test_reclaimed_ancestor_rejected) ... ok
+test_same_target_different_content_rejected (test_archive.TestAncestorsAndIdempotency.test_same_target_different_content_rejected) ... ok
+test_wrong_ancestor_rejected (test_archive.TestAncestorsAndIdempotency.test_wrong_ancestor_rejected) ... ok
+test_cli_end_to_end (test_archive.TestCli.test_cli_end_to_end) ... ok
+test_compact_detaches_ancestors (test_archive.TestCompaction.test_compact_detaches_ancestors) ... ok
+test_compact_failure_publishes_no_half_generation (test_archive.TestCompaction.test_compact_failure_publishes_no_half_generation) ... ok
+test_compact_interruption_before_reclaim (test_archive.TestCompaction.test_compact_interruption_before_reclaim) ... ok
+test_compact_interruption_before_switch (test_archive.TestCompaction.test_compact_interruption_before_switch) ... ok
+test_compacted_payload_has_no_all_hole_blocks (test_archive.TestCompaction.test_compacted_payload_has_no_all_hole_blocks) ... ok
+test_reader_pin_blocks_reclaim_until_released (test_archive.TestCompaction.test_reader_pin_blocks_reclaim_until_released) ... ok
+test_compact_pause_old_reader_continues (test_archive.TestConcurrency.test_compact_pause_old_reader_continues) ... ok
+test_single_writer_enforced (test_archive.TestConcurrency.test_single_writer_enforced) ... ok
+test_writer_pause_readers_see_only_committed (test_archive.TestConcurrency.test_writer_pause_readers_see_only_committed) ... ok
+test_committed_payload_corruption_detected (test_archive.TestCorruption.test_committed_payload_corruption_detected) ... ok
+test_staged_payload_corruption_rejected (test_archive.TestCorruption.test_staged_payload_corruption_rejected) ... ok
+test_truncated_payload_detected (test_archive.TestCorruption.test_truncated_payload_detected) ... ok
+test_retention_and_pins (test_archive.TestCrossGenerationReads.test_retention_and_pins) ... ok
+test_cross_block_last_write_wins (test_archive.TestDeltaSemantics.test_cross_block_last_write_wins) ... ok
+test_delta_out_of_bounds_rejected (test_archive.TestDeltaSemantics.test_delta_out_of_bounds_rejected) ... ok
+test_hole_to_all_zero_data_stays_data (test_archive.TestDeltaSemantics.test_hole_to_all_zero_data_stays_data)
+Explicit all-zero DATA is data: recorded as data, kept by compact. ... ok
+test_pure_resize_and_empty_ops (test_archive.TestDeltaSemantics.test_pure_resize_and_empty_ops) ... ok
+test_real_data_to_hole (test_archive.TestDeltaSemantics.test_real_data_to_hole)
+The baseline defect: a HOLE op must erase old data, semantically. ... ok
+test_shrink_extend_unaligned_sizes (test_archive.TestDeltaSemantics.test_shrink_extend_unaligned_sizes) ... ok
+test_shrink_then_extend_does_not_resurrect (test_archive.TestDeltaSemantics.test_shrink_then_extend_does_not_resurrect) ... ok
+test_twenty_generation_limit_and_compact_relief (test_archive.TestGenerationLimit.test_twenty_generation_limit_and_compact_relief) ... ok
+test_empty_and_out_of_bounds_ranges (test_archive.TestIngestAndRead.test_empty_and_out_of_bounds_ranges) ... ok
+test_empty_file_generation (test_archive.TestIngestAndRead.test_empty_file_generation) ... ok
+test_ingest_sparse_base_and_ranges (test_archive.TestIngestAndRead.test_ingest_sparse_base_and_ranges) ... ok
+test_oversize_source_rejected (test_archive.TestIngestAndRead.test_oversize_source_rejected) ... ok
+test_read_amplification_and_categories (test_archive.TestMetering.test_read_amplification_and_categories) ... ok
+test_storage_stats_categories (test_archive.TestMetering.test_storage_stats_categories) ... ok
+test_random_sequence_against_oracle (test_archive.TestOracleRandomSequence.test_random_sequence_against_oracle) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 0.996s
+
+OK

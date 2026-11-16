@@ -1,0 +1,23 @@
+{
+ "format": 1,
+ "generations": [
+  {
+   "base_generation": null,
+   "delta_id": null,
+   "dir": "g000002s1",
+   "generation": 2,
+   "kind": "snapshot",
+   "logical_size": 16384
+  },
+  {
+   "base_generation": 2,
+   "delta_id": "3aac1760aa36b43a1541678c5fc1b5e29e0303bdcd6fa03ba9515b03950bd15c",
+   "dir": "g000003",
+   "generation": 3,
+   "kind": "delta",
+   "logical_size": 16384
+  }
+ ],
+ "pending_reclaim": [],
+ "tip": 3
+}

@@ -1,0 +1,21 @@
+{"baseline_returned": "41414141", "correct": "00000000", "note": "delta.py copies DATA ops but silently drops HOLE ops", "range": [0, 4], "step": "baseline_defect"}
+{"data_extents": 1, "generation": 1, "logical_size": 16384, "matches_fixture_sha256": true, "payload_bytes": 16384, "source_sha256": "3761dc1edccac3080312727544bee3e10f306a4f57406845026c24a408a4068d", "step": "ingest-base"}
+{"generation": 2, "idempotent": false, "payload_bytes": 4096, "segments": 2, "step": "apply-delta"}
+{"generation": 2, "idempotent": true, "step": "apply-delta-idempotent"}
+{"data": "00000000", "fixed": true, "generation": 2, "meter": {"ancestor_payload_bytes": 0, "cache_bytes": 0, "metadata_bytes": 972, "own_payload_bytes": 0, "synthesized_zero_bytes": 4096}, "range": [0, 4], "step": "read-range"}
+{"data": "41414141", "generation": 1, "range": [0, 4], "step": "read-range-cross-generation"}
+{"data": "43434343", "generation": 2, "range": [8192, 8196], "step": "read-range"}
+{"blocks": [0, 1, 2], "data_len": 4098, "generation": 2, "meter": {"ancestor_payload_bytes": 4096, "cache_bytes": 0, "metadata_bytes": 1653, "own_payload_bytes": 4096, "synthesized_zero_bytes": 4096}, "range": [4095, 8193], "step": "read-range-cross-block"}
+{"generation": 3, "idempotent": false, "payload_bytes": 4096, "segments": 1, "step": "apply-delta"}
+{"kept_generations": [1, 2, 3], "note": "pin on gen 1 keeps every ancestor alive", "pending_reclaim": [], "rebased_generation": null, "reclaimed": [], "step": "compact-with-pin"}
+{"data": "41414141", "generation": 1, "step": "pinned-read"}
+{"kept_generations": [2, 3], "pending_reclaim": [], "rebased_generation": 2, "reclaimed": ["g000001", "g000002"], "step": "compact-after-pin-release"}
+{"pending_reclaim": [], "pins": [], "readable_generations": [2, 3], "step": "status", "stored_generations": [2, 3], "tip": 3}
+{"generations": {"2": {"blocks": 4, "ok": true}, "3": {"blocks": 4, "ok": true}}, "ok": true, "step": "verify"}
+{"byte_identical": true, "generation": 2, "path": "/workspace/demo_out/restored-g2.img", "sha256": "5537266a482083f67c9d9fbf1bd5f0a1977402624732f2fbf08c498d05549302", "step": "restore"}
+{"byte_identical": true, "generation": 3, "path": "/workspace/demo_out/restored-g3.img", "sha256": "5537266a482083f67c9d9fbf1bd5f0a1977402624732f2fbf08c498d05549302", "step": "restore"}
+{"ok": true, "step": "restore-target-matches-fixture-sha256"}
+{"out_of_bounds_read": {"error_type": "RangeRequestError", "rejected": true}, "reclaimed_ancestor_read": {"error_type": "RetentionError", "rejected": true}, "same_target_different_content": {"error_type": "DeltaConflictError", "rejected": true}, "step": "explicit-failures", "unpinned_third_reader": {"error_type": "ReaderLimitError", "rejected": true}, "wrong_ancestor_digests": {"error_type": "DigestMismatchError", "rejected": true}}
+{"base_payload_bytes": 12288, "delta_payload_bytes": 4096, "index_bytes": 1568, "manifest_bytes": 424, "orphan_bytes": 0, "pending_reclaim_bytes": 0, "pin_bytes": 0, "step": "storage-stats", "temp_bytes": 0, "total_bytes": 18376}
+{"generations": [{"dir": "g000002s1", "generation": 2, "index_bytes": 741, "kind": "snapshot", "payload_bytes": 12288}, {"dir": "g000003", "generation": 3, "index_bytes": 827, "kind": "delta", "payload_bytes": 4096}], "step": "storage-per-generation"}
+{"archive": "/workspace/demo_out/archive", "note": "archive left on disk for re-reading", "step": "done"}
