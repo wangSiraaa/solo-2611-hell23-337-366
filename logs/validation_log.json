@@ -1,0 +1,489 @@
+{
+  "scenarios": [],
+  "audit": {
+    "revision_seq": 4,
+    "database_file": "/workspace/warehouse.db",
+    "database_file_bytes": 94208,
+    "wal_file_bytes": 0,
+    "source_files": {
+      "fixtures/dsd-a.xml": 2213,
+      "fixtures/data-main.xml": 2193,
+      "fixtures/dsd-b.xml": 2135,
+      "fixtures/dsd-b2.xml": 2273
+    },
+    "source_file_total_bytes": 8814,
+    "rows_dsd_version": 3,
+    "rows_revision": 5,
+    "rows_obs_decl": 8,
+    "rows_decl_edge": 65,
+    "rows_migration_plan": 4,
+    "rows_migration_provenance": 48,
+    "rows_obs_key_dim": 7,
+    "rows_obs_fact": 31,
+    "rows_attr_fact": 124,
+    "rows_compat_assessment": 20,
+    "rows_compat_view_registry": 3,
+    "active_decl_edges": 63,
+    "materialised_by_revision": [
+      {
+        "revision_seq": 0,
+        "obs_fact_rows": 6,
+        "attr_fact_rows": 24,
+        "isolated_obs": 2
+      },
+      {
+        "revision_seq": 1,
+        "obs_fact_rows": 6,
+        "attr_fact_rows": 24,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 2,
+        "obs_fact_rows": 6,
+        "attr_fact_rows": 24,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 3,
+        "obs_fact_rows": 6,
+        "attr_fact_rows": 24,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 4,
+        "obs_fact_rows": 7,
+        "attr_fact_rows": 28,
+        "isolated_obs": 0
+      }
+    ],
+    "provenance_edges": 48,
+    "provenance_by_plan": [
+      {
+        "plan_id": "pAB",
+        "edges": 24
+      },
+      {
+        "plan_id": "pRefine2",
+        "edges": 24
+      }
+    ]
+  },
+  "revisions": [
+    {
+      "revision_seq": 0,
+      "kind": "import",
+      "dsd_version_seq": 0,
+      "status": "committed",
+      "plan_id": null,
+      "content_hash": "c314c7745c4072c5e38e294fe8f7abc763373899366c01e26623d3b3271e121e",
+      "created_at": "2026-11-16T01:07:21Z"
+    },
+    {
+      "revision_seq": 1,
+      "kind": "migration",
+      "dsd_version_seq": 1,
+      "status": "committed",
+      "plan_id": "pAB",
+      "content_hash": "c314c7745c4072c5e38e294fe8f7abc763373899366c01e26623d3b3271e121e",
+      "created_at": "2026-11-16T01:07:21Z"
+    },
+    {
+      "revision_seq": 2,
+      "kind": "revision",
+      "dsd_version_seq": 1,
+      "status": "committed",
+      "plan_id": null,
+      "content_hash": "d952808981b60501aecb85e6c0cefa0139c66423e8f7b25fdadfe4cbd29d379f",
+      "created_at": "2026-11-16T01:07:21Z"
+    },
+    {
+      "revision_seq": 3,
+      "kind": "migration",
+      "dsd_version_seq": 2,
+      "status": "committed",
+      "plan_id": "pRefine2",
+      "content_hash": "d952808981b60501aecb85e6c0cefa0139c66423e8f7b25fdadfe4cbd29d379f",
+      "created_at": "2026-11-16T01:07:21Z"
+    },
+    {
+      "revision_seq": 4,
+      "kind": "revision",
+      "dsd_version_seq": 2,
+      "status": "committed",
+      "plan_id": null,
+      "content_hash": "b316ba2068dc0fa6e20c5e09ffdc97c27418c6e0180421b70df87dac5562d73d",
+      "created_at": "2026-11-16T01:07:21Z"
+    }
+  ],
+  "plans": [
+    {
+      "plan_id": "pAB",
+      "from_dsd_version_seq": 0,
+      "to_dsd_version_seq": 1,
+      "bound_revision_seq": 0,
+      "status": "applied",
+      "applied_revision": 1
+    },
+    {
+      "plan_id": "pGroup",
+      "from_dsd_version_seq": 1,
+      "to_dsd_version_seq": 2,
+      "bound_revision_seq": 1,
+      "status": "invalidated",
+      "applied_revision": null
+    },
+    {
+      "plan_id": "pRefine",
+      "from_dsd_version_seq": 1,
+      "to_dsd_version_seq": 2,
+      "bound_revision_seq": 1,
+      "status": "invalidated",
+      "applied_revision": null
+    },
+    {
+      "plan_id": "pRefine2",
+      "from_dsd_version_seq": 1,
+      "to_dsd_version_seq": 2,
+      "bound_revision_seq": 2,
+      "status": "applied",
+      "applied_revision": 3
+    }
+  ],
+  "checks": [
+    {
+      "check": "import materialised 6 observations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "zero value canonical as finite 0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "NaN treated as missing, not finite and not explicit empty",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "trailing zeros normalised (1.2300 -> 1.23; 5.000 -> 5)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "explicit empty NOTE is present with empty text",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "duplicate CLASS group key isolates exactly the US observations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "CN observations are not isolated by the US group conflict",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "UNIT count vs USD preserved at series attachment",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev0 after import",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "refinement plan is lossless",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "refinement expands UNIT to one obs-scoped edge per observation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "each derived edge retains its original source edge",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "migration published revision 1 / dsd 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "UNIT survived the attachment move (the baseline defect is fixed)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "migration provenance links every derived UNIT edge to a series edge",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev1 after refinement",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "old DSD export expressible while series UNIT stays uniform",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev2 after obs revision",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "divergent obs-level UNIT makes old DSD export inexpressible",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "inexpressibility names UNIT and the real source observations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "no silent fallback: current facts still hold both values",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "identical same-seq revision replays idempotently",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "same revision_seq with different content conflicts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev3 after idempotent revision",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "delete removes the observation from current facts",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "deleted observation still readable at earlier revisions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "reinsert restores the observation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "revision with unmet old-value precondition is rejected",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "rejected revision created no new revision row",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "precondition-gated repair succeeds when old value matches",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev6 after delete/reinsert/preconditions",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "coarsening conflict is listed, not last-value-wins",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "conflict finding names the real affected observations and sources",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "applying a non-lossless plan raises MigrationConflict",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "warehouse stays on revision 6 after refused migration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "plan bound to older revision is refused once facts change",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "after explicit repair the UNIT coarsening has no conflict",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "new mandatory SOURCE without data isolates every observation",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "coarsened migration publishes revision 8 / dsd 2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "coarsened UNIT resolves at series layer with the shared value",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "deleted optional NOTE simply disappears from the new DSD",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "optional AUDIT exists and is absent without fabricated defaults",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev8 after coarsening",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "deleting a mandatory attribute is rejected at planning",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "incomparable group subset move lists all affected observations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "incomparable-scope migration is refused, not guessed",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "group->obs refinement plan is lossless",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "revision during planned migration forces re-plan (no recompute)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "stale plan is marked invalidated",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "failure inside migration propagates",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "rollback leaves revision sequence untouched",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "rollback leaves no partial derived edges or DSD rows",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "rolled-back plan remains planned and can be re-applied",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "re-applying after rollback succeeds",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev3 after group->obs move",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "reader never observes a partial revision (facts match revision)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "unknown group type rejects the dataset",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "explicit empty mandatory UNIT isolates only that series observations",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "other series unaffected by the empty-mandatory declaration",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev0 empty mandatory",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "dimension identity change rejects before planning",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "audit reports actual materialised rows per revision",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "audit reports provenance edge counts and file bytes",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "all revision facts remain queryable (current never overwrites history)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "historical revision 1 still shows original US/VOL 2026-02 UNIT=count",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "check": "oracle agreement @rev4 final state",
+      "ok": true,
+      "detail": ""
+    }
+  ],
+  "summary": {
+    "total": 66,
+    "passed": 66,
+    "failed": 0
+  }
+}

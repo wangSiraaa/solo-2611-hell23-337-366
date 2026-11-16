@@ -1,0 +1,17 @@
+{
+  "revision_seq": 2,
+  "operations": [
+    {
+      "action": "upsert",
+      "key": {"COUNTRY": "US", "MEASURE": "VOL", "TIME": "2026-01"},
+      "preconditions": [
+        {"attr_id": "UNIT", "expected": "count"}
+      ],
+      "value": "7.50",
+      "attrs": [
+        {"attr_id": "UNIT", "value": "USD"},
+        {"attr_id": "OBS_STATUS", "value": "A"}
+      ]
+    }
+  ]
+}

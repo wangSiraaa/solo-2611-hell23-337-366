@@ -1,0 +1,360 @@
+{
+  "target_observations": 100000,
+  "target_revisions": 50,
+  "xml_build_seconds": 0.21,
+  "xml_file_bytes": 16137253,
+  "import_seconds": 7.35,
+  "plan_seconds": 3.11,
+  "plan_lossless": true,
+  "derived_edges_in_plan": 200000,
+  "apply_seconds": 10.23,
+  "revision_seconds_total": 402.59,
+  "final_revision": 51,
+  "oracle_sample_size": 20,
+  "oracle_sample_mismatches": 0,
+  "audit": {
+    "revision_seq": 51,
+    "database_file": "/workspace/warehouse-100k.db",
+    "database_file_bytes": 1677455360,
+    "wal_file_bytes": 0,
+    "source_files": {
+      "/workspace/fixtures/data-100k.xml": 16137253,
+      "/workspace/fixtures/dsd-big-a.xml": 1412,
+      "/workspace/fixtures/dsd-big-b.xml": 1336
+    },
+    "source_file_total_bytes": 16140001,
+    "rows_dsd_version": 2,
+    "rows_revision": 52,
+    "rows_obs_decl": 100100,
+    "rows_decl_edge": 310200,
+    "rows_migration_plan": 1,
+    "rows_migration_provenance": 200000,
+    "rows_obs_key_dim": 100000,
+    "rows_obs_fact": 5200000,
+    "rows_attr_fact": 20800000,
+    "rows_compat_assessment": 204,
+    "rows_compat_view_registry": 2,
+    "active_decl_edges": 310000,
+    "materialised_by_revision": [
+      {
+        "revision_seq": 0,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 1,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 2,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 3,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 4,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 5,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 6,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 7,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 8,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 9,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 10,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 11,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 12,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 13,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 14,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 15,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 16,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 17,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 18,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 19,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 20,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 21,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 22,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 23,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 24,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 25,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 26,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 27,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 28,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 29,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 30,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 31,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 32,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 33,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 34,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 35,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 36,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 37,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 38,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 39,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 40,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 41,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 42,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 43,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 44,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 45,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 46,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 47,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 48,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 49,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 50,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      },
+      {
+        "revision_seq": 51,
+        "obs_fact_rows": 100000,
+        "attr_fact_rows": 400000,
+        "isolated_obs": 0
+      }
+    ],
+    "provenance_edges": 200000,
+    "provenance_by_plan": [
+      {
+        "plan_id": "big-refine",
+        "edges": 200000
+      }
+    ]
+  }
+}
